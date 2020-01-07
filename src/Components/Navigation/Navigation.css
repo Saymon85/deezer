@@ -1,0 +1,9 @@
+.Navigation{
+    border-right: 1px solid #C8C8C8;
+    height: 80vh; 
+    width: 20%;
+}
+.Navigation ul {
+    list-style: none;
+}
+

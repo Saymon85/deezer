@@ -4,7 +4,7 @@ import classes from './Logo.css';
 
 const Logo = () => {
     return (
-        <div className="Logo"  style={{display: 'inline-block', width: '20%'}}>
+        <div className={classes.Logo}  style={{display: 'inline-block', width: '20%'}}>
             <img src={deezerLogo} alt="Logo" />
         </div>
     )

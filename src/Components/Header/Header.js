@@ -4,9 +4,9 @@ import classes from './Header.css';
 
 const Header = () => {
     return (
-        <div className="Header">
-            <Logo className="Logo"/>
-            <h1 className="Heading">Saymon's Deezer app</h1>
+        <div className={classes.Header}>
+            <Logo />
+            <h1 className={classes.Heading}>Saymon's Deezer app</h1>
         </div>
     )
 }

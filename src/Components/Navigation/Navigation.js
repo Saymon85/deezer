@@ -1,10 +1,12 @@
 import React from 'react';
 import NavigationItem from './NavigationItem/NavigationItem';
-import { NavLink, Route, Switch, Router } from 'react-router-dom';
+import { NavLink, Route, Switch } from 'react-router-dom';
+import classes from './Navigation.css';
 
 const Navigation = () => {
+
     return (
-        <div>
+        <div className={classes.Navigation}>
             <ul>
                 <NavigationItem icon='music'><NavLink to='/'>Music</NavLink></NavigationItem>
                 <NavigationItem icon='th-large'><NavLink to='/search'>Search</NavLink></NavigationItem>

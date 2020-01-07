@@ -1,0 +1,25 @@
+.NavigationItem{
+    height: 7vh;
+    border: 1px solid black;
+    padding: 10px 30px;
+
+}
+
+.NavigationItem i,
+.NavigationItem span {
+    display: inline-block;
+    font-size: 18px;
+    font-family: "Mabry Pro Bold";
+    color: var(--BlackGradient);
+    margin-left: 5%;
+    text-align: center;
+}
+
+.NavigationItem a{
+    text-decoration: none;
+}
+
+.Active{
+    color: var(--BlueGradient);
+
+}

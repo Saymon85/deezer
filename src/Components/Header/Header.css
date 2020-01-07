@@ -4,11 +4,14 @@
     text-align: center;
     font-family: "Mabry Pro Bold";
     color: var(--BlackGradient);
+    vertical-align: middle; 
 }
 
 .Header {
     height: 10vh;
+    font-size: 1.15em;
     width: 100%;
-    vertical-align: middle;
+    vertical-align: middle; 
     border-bottom: 1px solid #C8C8C8;
+   /*  padding: 10px 0; */
 }
