@@ -1,0 +1,14 @@
+.Heading{
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+    font-family: "Mabry Pro Bold";
+    color: var(--BlackGradient);
+}
+
+.Header {
+    height: 10vh;
+    width: 100%;
+    vertical-align: middle;
+    border-bottom: 1px solid #C8C8C8;
+}

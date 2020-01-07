@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,71 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+ */
+
+ @font-face{
+    font-family: "Mabry Pro Regular";
+    src: url(./assets/fonts/Mabry/MabryPro-Regular.ttf);
+ }
+ 
+ @font-face{
+  font-family: "Mabry Pro Bold";
+  src: url(./assets/fonts/Mabry/MabryPro-Bold.ttf);
+}
+
+@font-face{
+  font-family: "Roboto-Medium";
+  src: url(./assets/fonts/Roboto/Roboto-Medium.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /* #### Color variables #### */
+
+  /* Main flat palette */ 
+
+  --Orange:#FEAA2D;
+  --Pink: #EF5466;
+  --Purple: #963CAA;
+
+  /* Multicolor flat palette */ 
+
+  --Red: #F04646;
+  --DeepOrange: #f5693c;
+  --Orange: #FEAA2D;
+  --Yellow: #F5E446;
+  --Green: #A5CD50;
+  --DarkGreen: #3CA564;
+  --Teal: #009BAA;
+  --LightBlue: #2D96C8;
+  --Blue: #3769C8;
+  --DeepPurple: #6E46B9;
+  --Purple: #963CAA;
+  --Pink: #EF5466;
+
+  /* Main gradients */ 
+  --OrangeGradient: linear-gradient(#DC4C11, #FEAB2E);
+  --OrangeToPink: linear-gradient(#FEAB2E, #D81B60);
+  --PinkGradient: linear-gradient(#D81B60, #F06262);
+  --PinkToPurple: linear-gradient(#F06262, #6B42B4);
+  --PurpleGradient: linear-gradient(#6B42B4, #943AAB);
+
+  /* Multicolor palette (gradients) */
+
+  --RedGradient: linear-gradient(#B12525, #EF4F4F);
+  --DeepOrangeGradient: linear-gradient(#D32F2F, #F6693C);
+  --OrangeGradient: linear-gradient(#DC4C11, #FEAB2E);
+  --YellowGradient: linear-gradient(#FFC92A, #F5E447);
+  --GreenGradient: linear-gradient(#3CA564, #A6CE50);
+  --TealGradient: linear-gradient(#00796B, #00ACC1);
+  --BlueGradient: linear-gradient(#3769C8, #11A8CC);
+  --IndigoGradient: linear-gradient(#3A489F, #6E44B7);
+  --LightPurpleGradient: linear-gradient(#9136A9, #D84EB6);
+  --BlackGradient: linear-gradient(#202122, #26303C);
 }
