@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+IDs.json
+test.html
+channel.html
+sample_response_deezer.json
