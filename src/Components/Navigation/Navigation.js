@@ -1,24 +1,33 @@
 import React from 'react';
 import NavigationItem from './NavigationItem/NavigationItem';
-import { NavLink, Route, Switch } from 'react-router-dom';
 import classes from './Navigation.css';
+
 
 const Navigation = () => {
 
+    const toggleActiveClass = (e) => {
+        document.querySelectorAll('#Navigation ul li').forEach( el => {
+            el.classList.remove(classes.Active);
+            e.target.parentNode.parentNode.classList.add(classes.Active);
+        })
+    }
+
     return (
-        <div className={classes.Navigation}>
-            <ul>
-                <NavigationItem icon='music'><NavLink to='/'>Music</NavLink></NavigationItem>
-                <NavigationItem icon='th-large'><NavLink to='/search'>Search</NavLink></NavigationItem>
-                <NavigationItem icon='heart'><NavLink to='/favorites'>Favorites</NavLink></NavigationItem>
-            </ul>
-            <Switch>
-                <Route to='/search' component={null}></Route>
-                <Route to='/favorites' component={null}></Route>
-                <Route to='/' component={null}></Route>
-            </Switch>
+        <div id='Navigation' className={classes.Navigation}>
+          <ul>
+              <NavigationItem 
+                    to='/' 
+                    icon='music' 
+                    exact 
+                    activeClass={classes.Active} 
+                    clicked={toggleActiveClass}>Music</NavigationItem>
+              <NavigationItem to='/search' icon='th-large' clicked={toggleActiveClass}>Search</NavigationItem>
+              <NavigationItem to='/favorites' icon='heart' clicked={toggleActiveClass}>Favorites</NavigationItem>
+          </ul>  
         </div>
     )
 }
 
 export default Navigation;
+
+ 

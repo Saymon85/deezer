@@ -1,25 +1,26 @@
 .NavigationItem{
     height: 7vh;
-    border: 1px solid black;
-    padding: 10px 30px;
-
-}
-
-.NavigationItem i,
-.NavigationItem span {
-    display: inline-block;
-    font-size: 18px;
-    font-family: "Mabry Pro Bold";
-    color: var(--BlackGradient);
-    margin-left: 5%;
-    text-align: center;
+    padding: 15px 30px;
 }
 
 .NavigationItem a{
     text-decoration: none;
 }
 
-.Active{
-    color: var(--BlueGradient);
-
+.NavigationItem a > *{
+    display: inline-block;
+    font-size: 18px;
+    font-family: "Mabry Pro Bold";
+    color: var(--Black);
+    margin-left: 5%;
+    text-align: center;
 }
+
+.NavigationItem a:hover > *,
+.NavigationItem a:active > *,
+.NavigationItem a.active > *{
+    color: var(--BluePrimary);
+    font-weight: 800;
+}
+
+

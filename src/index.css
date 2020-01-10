@@ -54,9 +54,11 @@ code {
   --Teal: #009BAA;
   --LightBlue: #2D96C8;
   --Blue: #3769C8;
+  --BluePrimary: #007feb;
   --DeepPurple: #6E46B9;
   --Purple: #963CAA;
   --Pink: #EF5466;
+  --Black:#202122;
 
   /* Main gradients */ 
   --OrangeGradient: linear-gradient(#DC4C11, #FEAB2E);

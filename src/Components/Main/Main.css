@@ -1,3 +1,8 @@
+.Main{
+    display: flex;
+    flex-direction: row;
+}
+
 .Navigation{
     border-right: 1px solid #C8C8C8;
     height: 80vh; 
@@ -6,6 +11,9 @@
 .Navigation ul {
     list-style: none;
     padding-top: 5%;
+}
+.Content{
+    width:80%; 
 }
 .Active{
     border-left: 5px solid var(--BluePrimary);
