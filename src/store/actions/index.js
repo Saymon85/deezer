@@ -1,0 +1,3 @@
+export {
+    fetchEditorialData
+} from './editorial';

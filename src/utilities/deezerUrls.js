@@ -1,0 +1,1 @@
+export const editorial = ['editorial/0/selection','editorial/0/charts', 'editorial/0/releases'];

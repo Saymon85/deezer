@@ -5,10 +5,17 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter} from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import thunk from 'redux-thunk';
 import reducer  from './store/reducers/reducer';
+import editorialReducer from './store/reducers/editorial';
 
-const store = createStore(reducer);
+const rootReducer = combineReducers({
+      editorial: editorialReducer,
+      reducer: reducer
+})
+
+const store = createStore(rootReducer, compose(applyMiddleware(thunk)));
 
 const app = (
     <Provider store={store}> 
