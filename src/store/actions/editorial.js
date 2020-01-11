@@ -23,6 +23,8 @@ export const editorialFetchDataFail = (err) => {
 }
 
 export const  fetchEditorialData = () => {
+    console.log('fetch editorial called');
+    return dispatch => {
         const [selection, charts, release ] = [...editorial];
         const fetchSelection = axiosGet.get(selection);
         const fetchCharts = axiosGet.get(charts);
@@ -35,4 +37,5 @@ export const  fetchEditorialData = () => {
                dispatch(editorialFetchDataSuccess(selectionData, chartsData, releaseData));
         })
             .catch(err => dispatch(editorialFetchDataFail(err)));
+    }        
 }
