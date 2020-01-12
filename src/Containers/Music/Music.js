@@ -10,18 +10,32 @@ import classes from './Music.css';
 class Music extends Component {
 
     componentDidMount(){
-        console.log('start fetching');
-        this.props.fetchEditorialData();
+        /* console.log('start fetching'); */
+        this.props.fetchEditorialData();  
     }
 
 
     render() {
         let music = <Spinner />;
         if (!this.props.loading){
-            music =  <MusicSection 
+            const charts = this.props.charts;
+            console.log(charts);
+            music = ( 
+                    <div>
+                        <MusicSection 
                             title='Editorial Selection' 
-                            selection={this.props.selection} 
+                            data={this.props.selection.data} 
                             loading={this.props.loading}/>
+                        <MusicSection 
+                            title='Editorial Charts'
+                            charts={true}
+                            data={this.props.charts} />    
+                        <MusicSection 
+                            title='Editorial Release'
+                            data={this.props.release}
+                       />
+                    </div>  
+            )
         }
         return (
             <div className={classes.Music}>

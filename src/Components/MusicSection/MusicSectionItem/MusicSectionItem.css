@@ -25,8 +25,13 @@
     transition-duration: 0.2s;
 }
 
-.MusicSectionItem div h5:hover{
+.MusicSectionItem div h4,
+.MusicSectionItem div h5{
+    max-width: 80%;
+}
 
+
+.MusicSectionItem div h5:hover{
     cursor: pointer;
     border-bottom: 1px solid var(--Black);
 }
