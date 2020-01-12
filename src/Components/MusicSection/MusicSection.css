@@ -1,0 +1,54 @@
+.MusicSection {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+}
+
+.MusicSection > div {
+    width: 100%;
+}
+
+/* ##### Heading style ##### */
+
+.SectionHeading {
+    position: relative;
+}
+
+.MusicSection div h2{
+    font-family: "Mabry Pro Bold";
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.CarouselButtons{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.CarouselButtons button {
+    background-color: var(--White);
+    color: var(--Black);
+    padding: 7px;
+    border: none;
+}
+
+.CarouselButtons button:hover{
+    cursor: pointer;
+    color: var(--LightBlue);
+}
+
+/* #### Content section styles #### */
+
+.MusicSection div ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    list-style: none;
+    padding: 20px 0;
+
+}
+

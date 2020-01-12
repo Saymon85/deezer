@@ -4,7 +4,15 @@ const initialState = {
     selection: {},
     charts: {},
     release: {},
+    loading: true,
     error: null
+}
+
+export const fetchEditorialStart = (state, loading) => {
+    return {
+        ...state,
+        loading: loading
+    }
 }
 
 export const fetchEditorialDataSuccess = (state, editorialData) => {
@@ -12,14 +20,16 @@ export const fetchEditorialDataSuccess = (state, editorialData) => {
         ...state,
         selection: editorialData.selection,
         charts: editorialData.charts,
-        release: editorialData.release
+        release: editorialData.release,
+        loading: false
     }
 }
 
 export const fetchEditorialDataFail = (state, err) => {
     return {
         ...state,
-        err
+        error: err,
+        loading: false
     }
 }
 
@@ -29,6 +39,8 @@ const reducer = (state = initialState, action) => {
             return fetchEditorialDataSuccess(state, action.editorialData);
         case actionTypes.FETCH_EDITORIAL_DATA_FAIL:
             return fetchEditorialDataFail(state, action.error);
+        case actionTypes.FETCH_EDITORIAL_DATA_START:
+            return fetchEditorialStart(state, action.loading);    
         default:
             return state;        
     }
