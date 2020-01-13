@@ -7,7 +7,7 @@ const MusicSectionItem = (props) => {
         
         <li className={classes.MusicSectionItem}>
             <div>
-                <img src={props.cover} alt={props.artist}></img>
+                {props.cover ?  <img src={props.cover} alt={props.artist}></img>  : props.text }
             </div>
             <div>
                 <h4>{props.title}</h4>

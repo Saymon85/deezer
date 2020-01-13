@@ -1,0 +1,16 @@
+.ChartSection{
+    width: 100%;
+}
+
+.ChartSection ul{
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    list-style: none;
+}
+
+.ChartSection ul li{
+    display: inline-block;
+    min-width: 20%;
+    height: 100%;
+}

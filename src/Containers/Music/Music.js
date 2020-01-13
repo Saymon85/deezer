@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import * as actions from '../../store/actions/index';
 import axios from 'axios';
 import MusicSection from '../../Components/MusicSection/MusicSection';
+import ChartsSpecialSection from '../../Components/MusicSection/ChartsSpecialSection/ChartsSpecialSection';
 import Spinner from '../../Components/UI/Spinner/Spinner';
 import classes from './Music.css';
 
@@ -19,14 +20,14 @@ class Music extends Component {
         let music = <Spinner />;
         if (!this.props.loading){
             const charts = this.props.charts;
-            console.log(charts);
+            /* console.log(charts); */
             music = ( 
                     <div>
                         <MusicSection 
                             title='Editorial Selection' 
                             data={this.props.selection.data} 
                             loading={this.props.loading}/>
-                        <MusicSection 
+                        <ChartsSpecialSection
                             title='Editorial Charts'
                             charts={true}
                             data={this.props.charts} />    
