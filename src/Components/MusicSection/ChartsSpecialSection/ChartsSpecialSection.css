@@ -1,4 +1,5 @@
 .ChartSection{
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -7,10 +8,35 @@
     overflow: hidden;
     flex-direction: row;
     list-style: none;
+    height: 150px;
 }
 
 .ChartSection ul li{
+    border-radius: 10px;
     display: inline-block;
+    margin-right: 5%;
     min-width: 20%;
+    min-height: 100%;
+    text-align: center;
+    padding: 7.5% 0;
+    transition: all ease 0.2s;
+}
+
+.ChartSection ul li div{
+    color: var(--White);
+    font-family: 'Mabry Pro Bold';
+    font-size: 1.4rem;
+    font-weight: 700;
+    vertical-align: middle;
     height: 100%;
+    width: 100%;
+}
+
+.ChartSection ul li div::first-letter{
+    text-transform: uppercase;
+}
+
+.ChartSection ul li:hover{
+    cursor: pointer;
+    opacity: 0.75;
 }
