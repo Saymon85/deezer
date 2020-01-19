@@ -7,6 +7,7 @@ export const initialState = {
 
 
 export const fetchChartsDataSuccess = (state, chartsData) => {
+    console.log(chartsData);
     return {
         ...state,
         charts: chartsData

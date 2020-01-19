@@ -13,3 +13,7 @@ export {
 export {
     fetchTop100Data
 } from './top100';
+
+export {
+    fetchGoodOldTimesData
+} from './goodOldTimes';

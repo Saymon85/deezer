@@ -12,6 +12,7 @@ import editorialReducer from './store/reducers/editorial';
 import radioReducer from './store/reducers/radio';
 import chartsReducer from './store/reducers/charts';
 import top100Reducer from './store/reducers/top100';
+import goodOldTimesReducer from './store/reducers/goodOldTimes';
 
 
 const rootReducer = combineReducers({
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
       radio: radioReducer,
       charts: chartsReducer,
       top100: top100Reducer,
+      goodOldTimes: goodOldTimesReducer,
       reducer: reducer
 })
 

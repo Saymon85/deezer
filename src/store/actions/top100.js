@@ -23,10 +23,14 @@ export const fetchTop100Data = () => {
             axiosGet.get(top100[0]),
             axiosGet.get(top100[1]),
             axiosGet.get(top100[2]),
-            axiosGet.get(top100[3])
+            axiosGet.get(top100[3]),
+            axiosGet.get(top100[4]),
+            axiosGet.get(top100[5]),
+            axiosGet.get(top100[6]),
+            axiosGet.get(top100[7])
         ]).then( response => {
             console.log(response);
-            fetchTop100DataSuccess(response.data);
+            fetchTop100DataSuccess(response);
         }).catch(err => fetchTop100DataFail(err));
     }
 }
