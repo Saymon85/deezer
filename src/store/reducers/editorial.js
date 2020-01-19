@@ -33,7 +33,7 @@ export const fetchEditorialDataFail = (state, err) => {
     }
 }
 
-const reducer = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
     switch(action.type){
         case actionTypes.FETCH_EDITORIAL_DATA_SUCCESS:
             return fetchEditorialDataSuccess(state, action.editorialData);

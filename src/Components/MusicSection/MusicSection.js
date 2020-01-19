@@ -13,7 +13,8 @@ const MusicSection = (props) => {
                             cover={item.cover_medium}
                             tracklist={item.tracklist}
                             title={item.title}
-                            artist={item.artist.name}></MusicSectionItem>
+                            artist={item.artist.name}
+                            clicked={props.clicked}></MusicSectionItem>
              )
          });
 

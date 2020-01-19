@@ -9,9 +9,16 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import reducer  from './store/reducers/reducer';
 import editorialReducer from './store/reducers/editorial';
+import radioReducer from './store/reducers/radio';
+import chartsReducer from './store/reducers/charts';
+import top100Reducer from './store/reducers/top100';
+
 
 const rootReducer = combineReducers({
       editorial: editorialReducer,
+      radio: radioReducer,
+      charts: chartsReducer,
+      top100: top100Reducer,
       reducer: reducer
 })
 

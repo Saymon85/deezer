@@ -7,7 +7,7 @@ const ChartSpecialSection = (props) => {
     const chartSection = Object.keys(props.data)
            .filter( el => el !== 'podcasts')
            .map((el, i) => {
-             const background = backgroundGradients[Math.round((Math.random() * 60) / 4)];
+             const background = backgroundGradients[Math.round(Math.random() * 14)];
              console.log(background);
              return <li key={`${el}${background}`} 
                         style={{backgroundImage:`var(${background})`}}>
@@ -17,6 +17,7 @@ const ChartSpecialSection = (props) => {
     console.log(chartSection);
     return (
         <div className={classes.ChartSection}>
+            <h2>{props.title}</h2>
             <ul>
                 {chartSection}
             </ul>

@@ -5,13 +5,13 @@ const MusicSectionItem = (props) => {
 
     return (
         
-        <li className={classes.MusicSectionItem}>
+        <li className={classes.MusicSectionItem} onClick={props.clicked}>
             <div>
                 {props.cover ?  <img src={props.cover} alt={props.artist}></img>  : props.text }
             </div>
             <div>
-                <h4>{props.title}</h4>
-                <h5>{props.artist}</h5>
+                <h5>{props.title}</h5>
+                <h6>{props.artist}</h6>
             </div>
         </li>
     )

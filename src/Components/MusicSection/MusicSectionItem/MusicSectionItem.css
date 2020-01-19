@@ -16,17 +16,19 @@
     border-radius: 5px;
     height: 80%;
     width: 100%;
+    transition: opacity ease-in 0.3s;
 }
 
 .MusicSectionItem div img:hover{
     opacity: 0.7;
     cursor: pointer;
-    transition: ease-in;
-    transition-duration: 0.2s;
 }
 
-.MusicSectionItem div h4,
-.MusicSectionItem div h5{
+.MusicSectionItem div h5,
+.MusicSectionItem div h6{
+    font-family: 'Mabry Pro Regular';
+    color: var(--Gray);
+    font-weight: 300;
     max-width: 80%;
 }
 
