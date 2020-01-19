@@ -29,8 +29,9 @@ export const fetchTop100Data = () => {
             axiosGet.get(top100[6]),
             axiosGet.get(top100[7])
         ]).then( response => {
-            console.log(response);
-            dispatch(fetchTop100DataSuccess(response));
+            const responseData = response.map(item => item.data);
+            console.log(responseData);
+            dispatch(fetchTop100DataSuccess(responseData));
         }).catch(err => dispatch(fetchTop100DataFail(err)));
     }
 }

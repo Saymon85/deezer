@@ -30,7 +30,7 @@ class Music extends Component {
         this.props.fetchChartsData();
         this.props.fetchTop100Data();
         this.props.fetchGoodOldTimesData();
-        setTimeout(this.props.fetchEditorialData, 1000);   
+        this.props.fetchEditorialData();   
 
     }
 
@@ -46,7 +46,6 @@ class Music extends Component {
         console.log(this.props.genres);
         console.log(this.props.top);
         console.log(this.props.charts);
-
     } 
 
     render() {

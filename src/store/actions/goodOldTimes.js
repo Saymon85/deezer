@@ -30,9 +30,12 @@ export const fetchGoodOldTimesData = () => {
             axiosGet.get(goodOldTimes[6]),
             axiosGet.get(goodOldTimes[7]),
         ]).then(response => {
-            fetchGoodOldTimesDataSuccess(response);
+            console.log(response);
+            const responseData = response.map(item => item.data);
+            console.log(responseData);
+            dispatch(fetchGoodOldTimesDataSuccess(responseData));
         }).catch(err => {
-            fetchGoodOldTimesDataFail(err);
+            dispatch(fetchGoodOldTimesDataFail(err));
         })
     }
 }

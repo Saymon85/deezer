@@ -2,7 +2,7 @@ import * as actionTypes from '../actions/actionTypes';
 
 
 const initialState = {
-    top100: [],
+    top100Data: [],
     error: null
 }
 
@@ -11,7 +11,7 @@ export const fetchTop100DataSuccess = (state, top100Data) => {
     console.log(top100Data);
     return {
         ...state,
-        top100: top100Data
+        top100Data: top100Data
     }
 }
 

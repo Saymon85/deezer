@@ -9,7 +9,7 @@ export const fetchGoodOldTimesDataSuccess = (state, goodOldTimesData) => {
     console.log(goodOldTimesData);
     return {
         ...state,
-        goodOldTimes: goodOldTimesData
+        goodOldTimesData: goodOldTimesData
     }
 }
 
@@ -24,9 +24,9 @@ export const reducer = (state = initialState, action) => {
     switch(action.type){
         case actionTypes.FETCH_GOOD_OLD_TIMES_DATA_SUCCESS:
             console.log(action.goodOldTimesData);
-            return fetchGoodOldTimesDataSuccess(action.goodOldTimesData);
+            return fetchGoodOldTimesDataSuccess(state, action.goodOldTimesData);
         case actionTypes.FETCH_GOOD_OLD_TIMES_DATA_FAIL:
-            return fetchGoodOldTimesDataFail(action.error);
+            return fetchGoodOldTimesDataFail(state, action.error);
         default: 
             return state;        
     }
