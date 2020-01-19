@@ -7,7 +7,7 @@ export const initialState = {
 
 
 export const fetchChartsDataSuccess = (state, chartsData) => {
-    console.log(chartsData);
+    
     return {
         ...state,
         charts: chartsData
@@ -24,6 +24,7 @@ export const fetchChartsDataFail = (state, error) => {
 export const reducer = (state = initialState, action) => {
     switch(action.type){
         case actionTypes.FETCH_CHARTS_DATA_SUCCESS:
+            console.log(action.chartsData);
             return fetchChartsDataSuccess(state, action.chartsData);
         case actionTypes.FETCH_CHARTS_DATA_FAIL:
             return fetchChartsDataFail(state, action.error);

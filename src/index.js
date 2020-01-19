@@ -14,6 +14,7 @@ import chartsReducer from './store/reducers/charts';
 import top100Reducer from './store/reducers/top100';
 import goodOldTimesReducer from './store/reducers/goodOldTimes';
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
       editorial: editorialReducer,
@@ -24,7 +25,7 @@ const rootReducer = combineReducers({
       reducer: reducer
 })
 
-const store = createStore(rootReducer, compose(applyMiddleware(thunk)));
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 const app = (
     <Provider store={store}> 

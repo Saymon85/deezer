@@ -25,6 +25,7 @@ export const fetchTop100DataFail = (state, error) => {
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case actionTypes.FETCH_TOP100_DATA_SUCCESS:
+            console.log(action.top100Data);
             return fetchTop100DataSuccess(state, action.top100Data);
         case actionTypes.FETCH_TOP100_DATA_FAIL:
             return fetchTop100DataFail(state, action.error);

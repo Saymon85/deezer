@@ -30,7 +30,7 @@ export const fetchTop100Data = () => {
             axiosGet.get(top100[7])
         ]).then( response => {
             console.log(response);
-            fetchTop100DataSuccess(response);
-        }).catch(err => fetchTop100DataFail(err));
+            dispatch(fetchTop100DataSuccess(response));
+        }).catch(err => dispatch(fetchTop100DataFail(err)));
     }
 }

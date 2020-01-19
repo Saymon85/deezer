@@ -22,10 +22,10 @@ export const fetchChartsData = () => {
         axiosGet.get(charts)
             .then(response => {
                 console.log(response.data);
-                fetchChartsDataSuccess(response.data);
+                dispatch(fetchChartsDataSuccess(response.data));
             })
             .catch(err => {
-                fetchChartsDataFail(err);
+                dispatch(fetchChartsDataFail(err));
             })
     }
 }

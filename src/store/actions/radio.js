@@ -36,10 +36,10 @@ export const fetchRadioData = () => {
                 const genresData = response[0].data;
                 const topData = response[1].data;
                 const listsData = response[2].data;
-                fetchRadioDataSuccess(genresData, topData, listsData);
+                dispatch(fetchRadioDataSuccess(genresData, topData, listsData));
             })
             .catch(err => {
-                fetchRadioDataFail(err);
+                dispatch(fetchRadioDataFail(err));
             })
     }
 }
