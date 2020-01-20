@@ -40,12 +40,13 @@ class Music extends Component {
     }
     
     onMusicClick = () => {
+        console.log(this.props.editorialRelease);
+        console.log(this.props.radioGenres);
+        console.log(this.props.radioTop);
+        console.log(this.props.radioLists);
+        console.log(this.props.charts);
         console.log(this.props.top100);
         console.log(this.props.goodOldTimes);
-        console.log(this.props.release);
-        console.log(this.props.genres);
-        console.log(this.props.top);
-        console.log(this.props.charts);
     } 
 
     render() {
@@ -55,17 +56,27 @@ class Music extends Component {
                     <div>
                         <MusicSection 
                             title='Editorial Selection' 
-                            data={this.props.selection.data} 
+                            data={this.props.editorialSelection.data} 
                             loading={this.props.loading}
-                            clicked={this.onTracksClick}/>
+                            clicked={this.onTracksClick}
+                            artist={true}/>
                         <ChartsSpecialSection
                             title='Editorial Charts'
                             charts={true}
                             data={this.props.editorialCharts} />    
                         <MusicSection 
                             title='Editorial Release'
-                            data={this.props.release}
-                       />
+                            data={this.props.editorialRelease}
+                            artist={true} />
+                        <MusicSection
+                            title='Radio Top'
+                            data={this.props.radioTop.data} />
+                        <MusicSection
+                            title='Top 100'
+                            data={this.props.top100} />
+                        <MusicSection 
+                            title='Good Old Times'
+                            data={this.props.goodOldTimes} />        
                     </div>  
             )
         }
@@ -79,12 +90,12 @@ class Music extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        selection: state.editorial.selection,
-        release: state.editorial.release,
+        editorialSelection: state.editorial.selection,
+        editorialRelease: state.editorial.release,
         editorialCharts: state.editorial.charts,
-        genres: state.radio.genres,
-        top: state.radio.top,
-        lists: state.radio.lists,
+        radioGenres: state.radio.genres,
+        radioTop: state.radio.top,
+        radioLists: state.radio.lists,
         charts: state.charts.charts,
         top100: state.top100.top100Data,
         goodOldTimes: state.goodOldTimes.goodOldTimesData,

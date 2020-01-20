@@ -10,10 +10,10 @@ const MusicSection = (props) => {
     let editorialSelection = props.data.map( item => {
              return (<MusicSectionItem 
                             key={item.id}
-                            cover={item.cover_medium}
+                            cover={item.cover_medium || item.picture_medium}
                             tracklist={item.tracklist}
                             title={item.title}
-                            artist={item.artist.name}
+                            artist={props.artist ? item.artist.name : null}
                             clicked={props.clicked}></MusicSectionItem>
              )
          });
