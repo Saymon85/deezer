@@ -1,6 +1,9 @@
 .Main{
     display: flex;
     flex-direction: row;
+    position: relative;
+    top: 10vh;
+    left: 0;
 }
 
 .Navigation{

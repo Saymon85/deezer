@@ -13,8 +13,7 @@ const ChartSpecialSection = (props) => {
                         style={{backgroundImage:`var(${background})`}}>
                         <div>{el}</div></li>;
     });
- 
-    console.log(chartSection);
+
     return (
         <div className={classes.ChartSection}>
             <h2>{props.title}</h2>

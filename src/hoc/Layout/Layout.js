@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../Components/Header/Header';
 import Main from '../../Components/Main/Main';
-
+import AudioPlayer from '../../Components/AudioPlayer/AudioPlayer';
 
 
 const Layout = () => {
@@ -9,6 +9,7 @@ const Layout = () => {
         <div>
           <Header />
           <Main />
+          <AudioPlayer />
         </div>
     )
 }

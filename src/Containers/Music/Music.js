@@ -71,6 +71,13 @@ class Music extends Component {
                         <MusicSection
                             title='Radio Top'
                             data={this.props.radioTop.data} />
+                        <MusicSection 
+                            title='Radio Lists'
+                            data={this.props.radioLists.data} />
+                        <ChartsSpecialSection
+                            title='Global Charts'
+                            charts={true}
+                            data={this.props.charts} />       
                         <MusicSection
                             title='Top 100'
                             data={this.props.top100} />
