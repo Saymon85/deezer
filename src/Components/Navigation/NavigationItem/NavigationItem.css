@@ -1,6 +1,6 @@
 .NavigationItem{
     height: 7vh;
-    padding: 15px 30px;
+    padding: 15px 20px;
 }
 
 .NavigationItem a{
@@ -9,7 +9,7 @@
 
 .NavigationItem a > *{
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Mabry Pro Bold";
     color: var(--Black);
     margin-left: 5%;

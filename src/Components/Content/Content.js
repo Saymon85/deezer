@@ -2,7 +2,7 @@ import React from 'react';
 import Music from '../../Containers/Music/Music';
 import Search from '../../Containers/Search/Search';
 import Favorites from '../../Containers/Favorites/Favorites';
-import TrackList from '../TrackList/TrackList';
+import TrackList from '../../Containers/TrackList/TrackList';
 import classes from './Content.css';
 import { Switch, Route, Redirect } from 'react-router-dom';
 

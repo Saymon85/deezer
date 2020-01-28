@@ -34,9 +34,14 @@ class Music extends Component {
 
     }
 
-    onTracksClick = () => {
+    onTracksClick = (trackList) => {
         console.log('clicked');
-        this.props.history.push('/tracklist');
+        console.log(trackList)
+        this.props.history.push({
+            pathname:'/tracklist',
+            search: `?albumId: ${trackList}`,
+            state: {trackListURL: trackList}
+        });
     }
     
     onMusicClick = () => {
@@ -58,7 +63,7 @@ class Music extends Component {
                             title='Editorial Selection' 
                             data={this.props.editorialSelection.data} 
                             loading={this.props.loading}
-                            clicked={this.onTracksClick}
+                            clicked={(trackList) => this.onTracksClick(trackList)}
                             artist={true}/>
                         <ChartsSpecialSection
                             title='Editorial Charts'

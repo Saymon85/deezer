@@ -26,6 +26,7 @@
     position: absolute;
     top: 50%;
     right: 0;
+    margin-right: 20px;
     transform: translateY(-50%);
 }
 
@@ -41,6 +42,9 @@
     color: var(--LightBlue);
 }
 
+.Disabled{
+    opacity: 0.2;
+}
 /* #### Content section styles #### */
 
 .MusicSection div ul{

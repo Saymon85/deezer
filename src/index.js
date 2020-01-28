@@ -13,6 +13,7 @@ import radioReducer from './store/reducers/radio';
 import chartsReducer from './store/reducers/charts';
 import top100Reducer from './store/reducers/top100';
 import goodOldTimesReducer from './store/reducers/goodOldTimes';
+import trackListReducer from './store/reducers/trackList';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
       charts: chartsReducer,
       top100: top100Reducer,
       goodOldTimes: goodOldTimesReducer,
+      trackList: trackListReducer,
       reducer: reducer
 })
 

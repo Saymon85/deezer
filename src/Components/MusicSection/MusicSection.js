@@ -23,8 +23,8 @@ const MusicSection = (props) => {
             <div className={classes.SectionHeading}>
                 <h2>{props.title}</h2>
                 <div className={classes.CarouselButtons}>
-                    <button className = 'Prev'><i className="fas fa-2x fa-angle-left"></i></button>
-                    <button className = 'Next'><i className="fas fa-2x fa-angle-right"></i> </button>
+                    <button className = {`Prev ${classes.Disabled}`}><i className='fas fa-2x fa-angle-left'></i></button>
+                    <button className = 'Next'><i className='fas fa-2x fa-angle-right'></i> </button>
                 </div> 
             </div>
             <div>
