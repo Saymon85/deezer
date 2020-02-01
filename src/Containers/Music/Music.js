@@ -15,17 +15,7 @@ class Music extends Component {
     }
 
     componentDidMount(){
-        /* console.log('start fetching'); */
-/*         Promise.all([
-            this.props.fetchEditorialData(),
-            this.props.fetchRadioData(),
-            this.props.fetchChartsData(),
-            this.props.fetchTop100Data(),
-            this.props.fetchGoodOldTimesData()
-        ]).then(res => {
-            console.log(res);
-            this.setState({loading: false});
-        }).catch(err => console.log(err)); */
+
         this.props.fetchRadioData();
         this.props.fetchChartsData();
         this.props.fetchTop100Data();

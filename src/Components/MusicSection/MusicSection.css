@@ -35,6 +35,7 @@
     color: var(--Black);
     padding: 7px;
     border: none;
+    outline: none;
 }
 
 .CarouselButtons button:hover{

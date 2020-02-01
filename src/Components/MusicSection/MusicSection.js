@@ -5,7 +5,6 @@ import classes from './MusicSection.css';
 
 
 const MusicSection = (props) => {
-    /* console.log(props.data); */
    
     let editorialSelection = props.data.map( item => {
              return (<MusicSectionItem 
@@ -23,8 +22,12 @@ const MusicSection = (props) => {
             <div className={classes.SectionHeading}>
                 <h2>{props.title}</h2>
                 <div className={classes.CarouselButtons}>
-                    <button className = {`Prev ${classes.Disabled}`}><i className='fas fa-2x fa-angle-left'></i></button>
-                    <button className = 'Next'><i className='fas fa-2x fa-angle-right'></i> </button>
+                    <button className={`Prev ${classes.Disabled}`}>
+                        <i className='fas fa-2x fa-angle-left'></i>
+                    </button>
+                    <button className='Next'>
+                        <i className='fas fa-2x fa-angle-right'></i>
+                    </button>
                 </div> 
             </div>
             <div>
@@ -34,6 +37,6 @@ const MusicSection = (props) => {
             </div>
         </div>
     )
-}
+};
 
 export default MusicSection;

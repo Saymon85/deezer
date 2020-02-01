@@ -16,7 +16,7 @@ class TrackList extends Component {
         if(!this.props.trackListData.loading){
             trackList = (
                 <div>
-                    Track List {/* {this.props.history.location.state.trackListURL} */}
+                    Track List 
                     {this.props.trackListData.trackListData.data.map(item => {
                         return <p key={item.id}>{item.title}</p>
                     })}
@@ -32,7 +32,6 @@ class TrackList extends Component {
 const mapStateToProps = (state) => {
     return {
         trackListData: state.trackList
-        /* trackListLoading: state.trackList.loading */
     }
 }
 

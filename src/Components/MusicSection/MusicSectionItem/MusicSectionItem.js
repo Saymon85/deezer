@@ -15,6 +15,6 @@ const MusicSectionItem = (props) => {
             </div>
         </li>
     )
-}
+};
 
 export default MusicSectionItem;
