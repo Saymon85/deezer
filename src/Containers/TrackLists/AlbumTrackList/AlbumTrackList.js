@@ -12,10 +12,12 @@ class AlbumTrackList extends Component{
     }
 
     render(){
+        
         let albumTrackList = <Spinner />
 
         if(!this.props.albumTrackListData.loading){
-            return (
+            
+            albumTrackList = (
                 <div>
                      Album List {this.props.albumTrackListData.trackListData.data.map( track => {
                         return <p key={track.id}>{track.title} - {track.artist.name}</p>
