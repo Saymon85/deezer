@@ -6,11 +6,37 @@ import axios from 'axios';
 
 
 class AlbumTrackList extends Component{
+
+    componentDidMount(){
+        this.props.loadAlbumTrackListData(this.props.location.state.trackListURL);
+    }
+
     render(){
-        return <div>
-               Album List {this.props.location.state.trackListURL} 
-        </div>
+        let albumTrackList = <Spinner />
+
+        if(!this.props.albumTrackListData.loading){
+            return (
+                <div>
+                     Album List {this.props.albumTrackListData.trackListData.data.map( track => {
+                        return <p key={track.id}>{track.title} - {track.artist.name}</p>
+                     })} 
+                </div>
+            )
+        }
+        return albumTrackList;
     }
 }
 
-export default AlbumTrackList;
+const mapStateToProps = (state) => {
+    return {
+        albumTrackListData: state.trackList
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loadAlbumTrackListData: (trackListURL) => dispatch(actions.fetchTrackListData(trackListURL))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AlbumTrackList, axios);
