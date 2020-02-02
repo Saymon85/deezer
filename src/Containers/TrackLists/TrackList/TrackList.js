@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Spinner from '../../Components/UI/Spinner/Spinner';
-import * as actions from '../../store/actions/index';
+import Spinner from '../../../Components/UI/Spinner/Spinner';
+import * as actions from '../../../store/actions/index';
 import { connect } from 'react-redux';
 import axios from 'axios';
 
@@ -8,7 +8,9 @@ class TrackList extends Component {
 
     componentDidMount(){
         console.log(this.props.history.location.state.trackListURL);
-        this.props.loadTrackListData(this.props.history.location.state.trackListURL);
+        if(this.props.location.state.trackListURL){
+            this.props.loadTrackListData(this.props.history.location.state.trackListURL);
+        }
     }
     render(){
         console.log(this.props);
@@ -19,6 +21,25 @@ class TrackList extends Component {
                     Track List 
                     {this.props.trackListData.trackListData.data.map(item => {
                         return <p key={item.id}>{item.title}</p>
+                    })}
+                </div>
+            )
+        }
+        if(this.props.location.state.dataList){
+            trackList = (
+                <div>
+                    Track List
+                    {this.props.location.state.dataList.map( track => {
+                        return <p key={track.id}>{track.title} - {track.artist.name}</p>
+                    })}
+                </div>
+            )
+        }
+        if(this.props.location.state.tracks){
+            trackList = (
+                <div>
+                    {this.props.location.state.tracks.map(track => {
+                        return <p key={track.id}>{track.title} - {track.artist.name}</p>
                     })}
                 </div>
             )

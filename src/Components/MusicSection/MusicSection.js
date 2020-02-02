@@ -11,9 +11,11 @@ const MusicSection = (props) => {
                             key={item.id}
                             cover={item.cover_medium || item.picture_medium}
                             tracklist={item.tracklist}
+                            tracks={item.tracks ? item.tracks : null}
                             title={item.title}
                             artist={props.artist ? item.artist.name : null}
-                            clicked={props.clicked}></MusicSectionItem>
+                            clicked={props.clicked}>
+                     </MusicSectionItem>
              )
          });
 

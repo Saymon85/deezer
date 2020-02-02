@@ -24,16 +24,34 @@ class Music extends Component {
 
     }
 
+    onAlbumClick = (trackListURL) => {
+        this.props.history.push({
+            pathname: '/albumstracklist',
+            state: { trackListURL : trackListURL}
+        })
+    }
+
     onTracksClick = (trackList) => {
         console.log('clicked');
         console.log(trackList)
         this.props.history.push({
-            pathname:'/tracklist',
-            search: `?albumId: ${trackList}`,
-            state: {trackListURL: trackList}
+            pathname:'/trackslist',
+            state: { trackListURL: trackList }
         });
     }
     
+    onChartsTracksClick = (dataList, pathTo) => {
+        this.props.history.push({
+            pathname: `/${pathTo}list`,
+            state: { dataList: dataList }
+        })
+    }
+    onTopAndGoodOldTimesClick = (tracksArray) => {
+        this.props.history.push({
+            pathname: '/trackslist',
+            state: { tracks: tracksArray }
+        })
+    }
     onMusicClick = () => {
         console.log(this.props.editorialRelease);
         console.log(this.props.radioGenres);
@@ -53,32 +71,39 @@ class Music extends Component {
                             title='Editorial Selection' 
                             data={this.props.editorialSelection.data} 
                             loading={this.props.loading}
-                            clicked={(trackList) => this.onTracksClick(trackList)}
+                            clicked={(trackList) => this.onAlbumClick(trackList)}
                             artist={true}/>
                         <ChartsSpecialSection
                             title='Editorial Charts'
                             charts={true}
-                            data={this.props.editorialCharts} />    
+                            data={this.props.editorialCharts}
+                            clicked={(dataList, pathTo) => this.onChartsTracksClick(dataList, pathTo)} />    
                         <MusicSection 
                             title='Editorial Release'
                             data={this.props.editorialRelease}
+                            clicked={(trackList) => this.onAlbumClick(trackList)}
                             artist={true} />
                         <MusicSection
                             title='Radio Top'
-                            data={this.props.radioTop.data} />
+                            data={this.props.radioTop.data}
+                            clicked={(trackList) => this.onTracksClick(trackList)} />
                         <MusicSection 
                             title='Radio Lists'
-                            data={this.props.radioLists.data} />
+                            data={this.props.radioLists.data}
+                            clicked={(trackList) => this.onTracksClick(trackList)} />
                         <ChartsSpecialSection
                             title='Global Charts'
                             charts={true}
-                            data={this.props.charts} />       
+                            data={this.props.charts}
+                            clicked={(dataList, pathTo) => this.onChartsTracksClick(dataList, pathTo)} />       
                         <MusicSection
                             title='Top 100'
-                            data={this.props.top100} />
+                            data={this.props.top100}
+                            clicked={(tracksArray) => this.onTopAndGoodOldTimesClick(tracksArray)} />
                         <MusicSection 
                             title='Good Old Times'
-                            data={this.props.goodOldTimes} />        
+                            data={this.props.goodOldTimes}
+                            clicked={(tracksArray) => this.onTopAndGoodOldTimesClick(tracksArray)} />        
                     </div>  
             )
         }
