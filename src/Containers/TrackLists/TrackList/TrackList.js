@@ -16,13 +16,15 @@ class TrackList extends Component {
         console.log(this.props);
         let trackList = <Spinner />
         if(!this.props.trackListData.loading){
+            
+            
             trackList = (
-                <div>
+                <>
                     Track List 
-                    {this.props.trackListData.trackListData.data.map(item => {
-                        return <p key={item.id}>{item.title}</p>
+                    {this.props.trackListData.trackListData.data.map(track => {
+                        return <p key={track.id}>{track.title}</p>
                     })}
-                </div>
+                </>
             )
         }
         if(this.props.location.state.dataList){
@@ -45,7 +47,10 @@ class TrackList extends Component {
             )
         }
         return (
-            trackList
+            <div className='Container'>
+                {trackList}
+            </div>
+            
         )
     }
 }
