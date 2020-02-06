@@ -7,7 +7,7 @@ const NavigationItem = (props) => {
     return (
        <li className={classes.NavigationItem +" "+props.activeClass}>
          <NavLink exact={props.exact} to={props.to} activeClassName={classes.active} onClick={props.clicked}>
-             <i className={`fas fa-${props.icon}`}></i>
+             <i className={props.icon}></i>
              <span>{props.children}</span>
          </NavLink>
        </li> 

@@ -17,12 +17,12 @@ const Navigation = () => {
           <ul>
               <NavigationItem 
                     to='/' 
-                    icon='music' 
+                    icon='fas fa-music' 
                     exact 
                     activeClass={classes.Active} 
                     clicked={toggleActiveClass}>Music</NavigationItem>
-              <NavigationItem to='/search' icon='th-large' clicked={toggleActiveClass}>Search</NavigationItem>
-              <NavigationItem to='/favorites' icon='heart' clicked={toggleActiveClass}>Favorites</NavigationItem>
+              <NavigationItem to='/search' icon='fas fa-th-large' clicked={toggleActiveClass}>Search</NavigationItem>
+              <NavigationItem to='/favorites' icon='far fa-heart' clicked={toggleActiveClass}>Favorites</NavigationItem>
           </ul>  
         </div>
     )

@@ -10,11 +10,11 @@ const TrackListHeader = (props) => {
         <div className='Header'>
             <div className='Picture'>{headerImage}</div>
             <div className='Info'>
-            <div className='Title'>{props.title}</div>
-                <div className='Creator'>
-                    <img className='Thumbnail' alt='creator'></img>
-                    <span>{props.creator}</span>
-                </div>
+                <div className='Title'>{props.title}</div>
+                    <div className='Creator'>
+                      <img className='Thumbnail' alt='creator'></img>
+                      <span>{props.creator}</span>
+                    </div>
                 <div className='Description'>{props.description}</div>
                 <div className='AdditionalInfo'>
                     <span>{props.numbOfTracks}</span>

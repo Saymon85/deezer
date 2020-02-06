@@ -1,0 +1,52 @@
+.Header{
+    height: 40vh;
+    width: 100%;
+    padding: 10px;
+}
+
+.Picture{
+    height: 100%;
+    width: 30%;
+    padding: 20px;
+}
+
+.Info{
+    height: 100%;
+    width: 65%;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.Title{
+    font-family: 'Mabry Pro Bold';
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--BlackTextPrimary);
+    padding: 10px;
+}
+
+.Creator{
+    padding: 10px;
+}
+
+.Creator span {
+    font-family: 'Mabry Pro Regular';
+    font-size: 1rem;
+    color: var(--BlackTextPrimary);
+    line-height: 28px;
+    letter-spacing: 0.25px;
+}
+
+.Description{
+    color: var(--Gray);
+}
+
+.AdditionalInfo{
+    padding: 10px;
+}
+
+.AdditionalInfo span{
+    font-size: 0.8rem;
+    font-family: 'Mabry Pro Regular';
+    color: var(--LightGray);
+}
