@@ -5,9 +5,11 @@ import classes from './TrackListControl.css';
 const TrackListControls = (props) => {
     return (
         <div className='Controls'>
-            <Button icon='far fa-play-circle'>Listen</Button>
-            <Button icon='far fa-heart'>Add</Button>
-            <Button icon='fas fa-share-square'>Share</Button>
+            <Button type='Play' icon='far fa-play-circle'>Listen</Button>
+            <Button type='Add 'icon='far fa-heart'>Add</Button>
+            <Button type='Share' icon='fas fa-share-square'>Share</Button>
         </div>
     )
 }
+
+export default TrackListControls; 

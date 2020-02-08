@@ -1,0 +1,28 @@
+button{
+    background-color: var(--LightGray);
+    border: 1px solid var(--Gray);
+    color: var(--BlackPrimaryText);
+    padding: 0 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+i{
+    margin-right: 5px;
+}
+
+.Play{
+    background-color: var(--PinkMain);
+    color: var(--White);
+    font-size: 0.7rem;
+    width: 20%;
+}
+
+.Add{
+    width: 15%;
+}
+
+.Share{
+    width: 15%;
+}

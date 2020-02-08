@@ -1,0 +1,25 @@
+.TrackList{
+    font-family: "Roboto-Medium";
+    padding: 10px;
+    width: 100%;
+}
+
+.TrackListHeading{
+    color: var(--Gray);
+    border-top: 1px solid var(--Gray);
+    border-bottom: 1px solid var(--Gray);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 16px;
+    display: flex;
+    width:100%;
+}
+
+.TrackListBody{
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 0 16px;
+    width: 100%;
+}
+
