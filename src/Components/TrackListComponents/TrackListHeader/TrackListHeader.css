@@ -11,6 +11,7 @@
 }
 
 .Info{
+    position: relative;
     height: 100%;
     width: 65%;
     padding: 20px;
@@ -43,10 +44,22 @@
 
 .AdditionalInfo{
     padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .AdditionalInfo span{
     font-size: 0.8rem;
     font-family: 'Mabry Pro Regular';
     color: var(--LightGray);
+}
+
+
+.NoPicture{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--White); 
 }

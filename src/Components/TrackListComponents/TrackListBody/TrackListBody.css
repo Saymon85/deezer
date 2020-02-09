@@ -7,7 +7,6 @@
 .TrackListHeading{
     color: var(--Gray);
     border-top: 1px solid var(--Gray);
-    border-bottom: 1px solid var(--Gray);
     font-size: 0.75rem;
     letter-spacing: 1px;
     text-transform: uppercase;

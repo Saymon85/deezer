@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Spinner from '../../../Components/UI/Spinner/Spinner';
+import TrackListHeader from '../../../Components/TrackListComponents/TrackListHeader/TrackListHeader';
+import TrackListControls from '../../../Components/TrackListComponents/TrackListControls/TrackListControls';
+import TrackListBody from '../../../Components/TrackListComponents/TrackListBody/TrackListBody';
 import * as actions from '../../../store/actions/index';
 import { connect } from 'react-redux';
 import axios from 'axios';
@@ -20,9 +23,12 @@ class TrackList extends Component {
             
             trackList = (
                 <>
-                    Track List 
+                    Track List
+                    <TrackListHeader title={null}></TrackListHeader>
+                                <TrackListControls></TrackListControls>
+                                <TrackListBody></TrackListBody> 
                     {this.props.trackListData.trackListData.data.map(track => {
-                        return <p key={track.id}>{track.title}</p>
+                        return  <p key={track.id}>{track.title}</p>    
                     })}
                 </>
             )

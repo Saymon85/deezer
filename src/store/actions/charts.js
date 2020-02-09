@@ -21,9 +21,11 @@ export const fetchChartsData = () => {
     return dispatch => {
         axiosGet.get(charts)
             .then(response => {
+                console.log(response);
                 dispatch(fetchChartsDataSuccess(response.data));
             })
             .catch(err => {
+                console.log(err);
                 dispatch(fetchChartsDataFail(err));
             })
     }

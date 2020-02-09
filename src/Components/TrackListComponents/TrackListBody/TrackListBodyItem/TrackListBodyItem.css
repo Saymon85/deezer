@@ -1,0 +1,48 @@
+.TrackListBodyItem {
+    border-top: 1px solid var(--Gray);
+    text-align: center;
+    height: 52px;
+    width: 100%;
+}
+
+.OrdinalNumber{
+    color: var(--Gray);
+    width: 10%;
+}
+
+.PlayBtn{
+    display: hidden;
+}
+.Heart{
+    color: var(--Gray);
+    width: 10%;
+}
+
+.TrackTitle{
+    color: var(--BlackPrimaryText);
+    width: 30%;
+    text-align: left;
+}
+
+.ArtistName{
+    color: var(--BlackPrimaryText);
+    width: 20%;
+    text-align: left;
+}
+
+.AlbumName{
+    color: var(--BlackPrimaryText);
+    width: 20%;
+    text-align:left;
+}
+
+.TrackListBodyItem:hover .PlayBtn{
+    display: block;
+    position: relative;
+    left: 0;
+    z-index: 1;
+    width: 20%;
+    text-align:left;
+    width: 10%;
+}
+

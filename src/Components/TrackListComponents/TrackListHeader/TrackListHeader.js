@@ -1,13 +1,17 @@
 import React from 'react';
 import classes from './TrackListHeader.css';
+import { backgroundGradients } from '../../../utilities/helpers';
+
 
 const TrackListHeader = (props) => {
     let headerImage = <img src={props.picture} alt='Playlist'></img>
     if(!props.img){
-        headerImage = <div className=''></div>
+        const background = backgroundGradients[Math.round(Math.random() * 14)];
+        headerImage = <div style={{backgroundImage: `var(${background})`}} 
+                           className={classes.NoPicture}>Tracks</div>
     }
     return (
-        <div className='Header'>
+        <div className={classes.Header}>
             <div className='Picture'>{headerImage}</div>
             <div className='Info'>
                 <div className='Title'>{props.title}</div>

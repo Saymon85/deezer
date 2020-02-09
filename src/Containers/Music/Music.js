@@ -40,7 +40,7 @@ class Music extends Component {
         });
     }
     
-    onChartsTracksClick = (dataList, pathTo) => {
+    onChartsClick = (dataList, pathTo) => {
         this.props.history.push({
             pathname: `/${pathTo}list`,
             state: { dataList: dataList }
@@ -77,7 +77,7 @@ class Music extends Component {
                             title='Editorial Charts'
                             charts={true}
                             data={this.props.editorialCharts}
-                            clicked={(dataList, pathTo) => this.onChartsTracksClick(dataList, pathTo)} />    
+                            clicked={(dataList, pathTo) => this.onChartsClick(dataList, pathTo)} />    
                         <MusicSection 
                             title='Editorial Release'
                             data={this.props.editorialRelease}
@@ -95,7 +95,7 @@ class Music extends Component {
                             title='Global Charts'
                             charts={true}
                             data={this.props.charts}
-                            clicked={(dataList, pathTo) => this.onChartsTracksClick(dataList, pathTo)} />       
+                            clicked={(dataList, pathTo) => this.onChartsClick(dataList, pathTo)} />       
                         <MusicSection
                             title='Top 100'
                             data={this.props.top100}

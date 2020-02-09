@@ -41,6 +41,7 @@ export const  fetchEditorialData = () => {
             .then( response => {
                const selectionData = response[0].data;
                const chartsData = response[1].data;
+               console.log(chartsData);
                const releaseData = response[2].data.data;
                dispatch(editorialFetchDataSuccess(selectionData, chartsData, releaseData));
         })
