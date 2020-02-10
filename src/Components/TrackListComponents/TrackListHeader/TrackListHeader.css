@@ -1,21 +1,32 @@
 .Header{
     height: 40vh;
     width: 100%;
-    padding: 10px;
+    display: flex;
 }
 
 .Picture{
-    height: 100%;
+    min-height: 100%;
     width: 30%;
-    padding: 20px;
+}
+
+.Picture div{
+    border-radius: 4px;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.Picture div span {
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%);
 }
 
 .Info{
     position: relative;
     height: 100%;
     width: 65%;
-    padding: 20px;
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 .Title{

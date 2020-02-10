@@ -8,10 +8,10 @@ const initialState = {
     error: null
 }
 
-export const fetchEditorialStart = (state, loading) => {
+export const fetchEditorialStart = (state) => {
     return {
         ...state,
-        loading: loading
+        loading: true
     }
 }
 

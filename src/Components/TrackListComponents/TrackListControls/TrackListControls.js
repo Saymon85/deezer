@@ -6,7 +6,7 @@ const TrackListControls = (props) => {
     return (
         <div className={classes.Controls}>
             <Button type='Play' icon='far fa-play-circle'>Listen</Button>
-            <Button type='Add 'icon='far fa-heart'>Add</Button>
+            <Button type='Favorite' icon='far fa-heart'>Add</Button>
             <Button type='Share' icon='fas fa-share-square'>Share</Button>
         </div>
     )

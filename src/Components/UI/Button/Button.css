@@ -1,26 +1,37 @@
 button{
-    background-color: var(--LightGray);
-    border: 1px solid var(--Gray);
+    background-color: #f8f8f9;
+    border: 1px solid var(--LightGray);
+    border-radius: 3px;
     color: var(--BlackPrimaryText);
-    padding: 0 5px;
+    padding: 5px 0;
     margin-right: 15px;
     cursor: pointer;
     font-size: 0.8rem;
+    font-family: "Roboto-Medium";
     text-align: center;
+    outline:none;
+    height: 50%;
 }
 
-i{
+button:hover{
+    background-color: var(--White);
+}
+
+.Icon{
     margin-right: 5px;
 }
 
 .Play{
     background-color: var(--PinkMain);
     color: var(--White);
-    font-size: 0.7rem;
     width: 20%;
 }
 
-.Add{
+.Play:hover{
+    background-color: var(--PinkDark);
+}
+
+.Favorite{
     width: 15%;
 }
 
