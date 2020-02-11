@@ -42,6 +42,7 @@ code {
   --OrangeMain:#FEAA2D;
   --PinkMain: #EF5466;
   --PurpleMain: #963CAA;
+  --GrayMain: #92929D;
 
   /* Multicolor flat palette */ 
 
@@ -58,7 +59,7 @@ code {
   --DeepPurple: #6E46B9;
   --Purple: #963CAA;
   --Pink: #EF5466;
-  --PinkDark: #e73a4e;
+  --PinkDark: #E73A4E;
   --Black:#32323D;
   --BlackTextPrimary: #191919;
   --Gray: #72727D;
@@ -84,4 +85,8 @@ code {
   --IndigoGradient: linear-gradient(to top right,#3A489F, #6E44B7);
   --LightPurpleGradient: linear-gradient(45deg,#9136A9, #D84EB6);
   --BlackGradient: linear-gradient(-45deg,#202122, #26303C);
+
+  /* Secondary colors  */
+
+  --GraySecondary: #F4F4F4;
 }

@@ -23,10 +23,10 @@ class TrackList extends Component {
             
             trackList = (
                 <>
-                    Track List
                     <TrackListHeader title={null}></TrackListHeader>
                                 <TrackListControls></TrackListControls>
-                                <TrackListBody></TrackListBody> 
+                                <TrackListBody 
+                                     data={this.props.trackListData.trackListData.data}></TrackListBody> 
                     {this.props.trackListData.trackListData.data.map(track => {
                         return  <p key={track.id}>{track.title}</p>    
                     })}

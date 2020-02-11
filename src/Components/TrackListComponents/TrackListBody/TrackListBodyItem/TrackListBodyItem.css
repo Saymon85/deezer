@@ -1,48 +1,73 @@
 .TrackListBodyItem {
+    display: flex;
+    align-items: center;
     border-top: 1px solid var(--Gray);
+    font-family: "Roboto-Medium";
+    font-weight: 300;
     text-align: center;
+    letter-spacing: 1px;
+    padding: 5px 0;
     height: 52px;
     width: 100%;
+    position: relative;
 }
 
 .OrdinalNumber{
     color: var(--Gray);
-    width: 10%;
+    width: 7.5%;
 }
 
 .PlayBtn{
-    display: hidden;
+    display: none;
+    font-size: 2.1rem;
+    transition:  ease-in-out 1s;
 }
+
 .Heart{
     color: var(--Gray);
-    width: 10%;
+    width: 7.5%;
 }
 
 .TrackTitle{
-    color: var(--BlackPrimaryText);
-    width: 30%;
+    color: var(--Black);
+    width: 25%;
     text-align: left;
 }
 
 .ArtistName{
-    color: var(--BlackPrimaryText);
+    color: var(--Black);
     width: 20%;
     text-align: left;
 }
 
 .AlbumName{
-    color: var(--BlackPrimaryText);
+    color: var(--Black);
     width: 20%;
     text-align:left;
+}
+
+.Duration{
+    color: var(--Black);
+    width: 10%;
+    text-align: left;
+}
+
+.TrackListBodyItem:hover{
+    background-color: var(--GraySecondary);
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .TrackListBodyItem:hover .PlayBtn{
     display: block;
-    position: relative;
-    left: 0;
-    z-index: 1;
-    width: 20%;
+    position: absolute;
+    left: calc( 5% / 2);
+    z-index: 10;
     text-align:left;
-    width: 10%;
+    width: 7.5%;
+    transition: all ease-in-out 1s;
 }
 
+.TrackListBodyItem:hover .OrdinalNumber{
+    opacity:0;
+}

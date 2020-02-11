@@ -1,24 +1,48 @@
 .TrackList{
     font-family: "Roboto-Medium";
     margin-top: 10px;
+    padding-right: 10px;
     width: 100%;
 }
 
 .TrackListHeading{
-    color: var(--Gray);
+    color: var(--LightGray);
     border-top: 1px solid var(--Gray);
-    font-size: 0.75rem;
-    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 0 16px;
+    text-align: left;
+    padding: 10px 0px;
     display: flex;
     width:100%;
 }
 
+
+.Hash{
+    text-align: center;
+    font-size: 1rem;
+    width: 7.5%;   
+}
+.Fav{
+    min-width: 7.5%;
+}
+.Track{
+    width: 25%;
+}
+
+.Artist, .Album{
+    width: 20%;
+}
+
+.Duration{
+    width: 10%;
+}
+
 .TrackListBody{
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     letter-spacing: 1px;
-    padding: 0 16px;
+    /* padding: 0 16px; */
     width: 100%;
 }
 

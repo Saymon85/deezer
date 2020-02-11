@@ -1,6 +1,7 @@
 .Controls{
     display: flex;
+    align-items: center;
     height: 10vh;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
