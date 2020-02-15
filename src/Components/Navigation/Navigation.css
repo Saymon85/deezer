@@ -1,5 +1,5 @@
 .Navigation{
-    border-right: 1px solid var(--LightGray);
+    border-right: 1px solid var(--BorderGray);
     position: fixed;
     left:0;
     top:10vh;

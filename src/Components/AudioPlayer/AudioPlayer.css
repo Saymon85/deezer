@@ -1,6 +1,6 @@
 .AudioPlayer{
     background-color: white;
-    border-top: 1px solid var(--LightGray);
+    border-top: 1px solid var(--BorderGray);
     position: fixed;
     left:0;
     bottom: 0;

@@ -4,7 +4,7 @@ import { backgroundGradients } from '../../../utilities/helpers';
 
 
 const TrackListHeader = (props) => {
-    let headerImage = <img src={props.picture} alt='Playlist'></img>
+    let headerImage = <img src={props.img} alt='Playlist'></img>
     if(!props.img){
         const background = backgroundGradients[Math.round(Math.random() * 14)];
         headerImage = <div style={{backgroundImage: `var(${background})`}} 
@@ -15,13 +15,13 @@ const TrackListHeader = (props) => {
             <div className={classes.Picture}>{headerImage}</div>
             <div className={classes.Info}>
                 <div className={classes.Title}>{props.title}</div>
-                    <div className={classes.Creator}>
-                      <img className={classes.Thumbnail} alt='creator'></img>
-                      <span>{props.creator}</span>
-                    </div>
+                <div className={classes.Creator}>
+                    <img src={props.thumbnail} className={classes.Thumbnail} alt='creator'></img>
+                    <span>{props.creator}</span>
+                </div>
                 <div className={classes.Description}>{props.description}</div>
                 <div className={classes.AdditionalInfo}>
-                    <span>{props.numbOfTracks}</span>
+                    <span>{`${props.numbOfTracks} tracks`}</span>
                     <span>{props.duration}</span>
                     <span>{props.fans ? props.fans : 'No Fans'}</span>
                 </div>

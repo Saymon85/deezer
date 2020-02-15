@@ -31,27 +31,42 @@
 }
 
 .Title{
+    color: var(--BlackTextPrimary);
     font-family: 'Mabry Pro Bold';
     font-size: 2rem;
     font-weight: 700;
-    color: var(--BlackTextPrimary);
-    padding: 10px;
+    letter-spacing: 1px;
+    padding: 0 3px;
 }
 
 .Creator{
-    padding: 10px;
+    position: relative;
+    padding: 5px;
 }
 
 .Creator span {
+    color: var(--BlackTextPrimary);
     font-family: 'Mabry Pro Regular';
     font-size: 1rem;
-    color: var(--BlackTextPrimary);
+    display: inline-block;
     line-height: 28px;
     letter-spacing: 0.25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Thumbnail{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 5px;
 }
 
 .Description{
     color: var(--Gray);
+    padding: 5px;
 }
 
 .AdditionalInfo{
@@ -62,16 +77,19 @@
 }
 
 .AdditionalInfo span{
+    color: var(--LightGray);
     font-size: 0.8rem;
     font-family: 'Mabry Pro Regular';
-    color: var(--LightGray);
+    margin-right: 5px;
 }
 
 
+
 .NoPicture{
+    color: var(--White); 
     text-align: center;
     vertical-align: middle;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--White); 
+    
 }

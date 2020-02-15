@@ -64,6 +64,7 @@ code {
   --BlackTextPrimary: #191919;
   --Gray: #72727D;
   --LightGray: #C8C8C8;
+  --BorderGray: #EAEAEA;
   --White: #FFF;
 
   /* Main gradients */ 
@@ -89,4 +90,18 @@ code {
   /* Secondary colors  */
 
   --GraySecondary: #F4F4F4;
+
+
+  /* ### Smooth scorlling ### */
+
+  scroll-behavior: smooth;
+}
+
+
+/* ***** Media queries ******** */
+
+@media screen and (max-width: 850px){
+  :root{
+    font-size: 14px;
+  }
 }

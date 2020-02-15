@@ -10,7 +10,7 @@
 
 .Header {
     background-color: var(--White);
-    border-bottom: 1px solid var(--LightGray);
+    border-bottom: 1px solid var(--BorderGray);
     font-size: 1.15em;
     position: fixed;
     top:0;

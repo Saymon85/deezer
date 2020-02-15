@@ -24,7 +24,7 @@ button:hover{
 .Play{
     background-color: var(--PinkMain);
     color: var(--White);
-    width: 20%;
+    width: 15%;
 }
 
 .Play:hover{
@@ -32,9 +32,9 @@ button:hover{
 }
 
 .Favorite{
-    width: 15%;
+    width: 10%;
 }
 
 .Share{
-    width: 15%;
+    width: 10%;
 }

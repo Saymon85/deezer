@@ -7,7 +7,7 @@
 
 .TrackListHeading{
     color: var(--LightGray);
-    border-top: 1px solid var(--Gray);
+    border-top: 1px solid var(--BorderGray);
     font-size: 0.8rem;
     font-weight: 400;
     letter-spacing: 2px;
@@ -42,7 +42,6 @@
 .TrackListBody{
     font-size: 0.85rem;
     letter-spacing: 1px;
-    /* padding: 0 16px; */
     width: 100%;
 }
 

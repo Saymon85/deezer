@@ -5,7 +5,9 @@ import TrackListControls from '../../../Components/TrackListComponents/TrackList
 import TrackListBody from '../../../Components/TrackListComponents/TrackListBody/TrackListBody';
 import * as actions from '../../../store/actions/index';
 import { connect } from 'react-redux';
+import classes from './TrackList.css';
 import axios from 'axios';
+import { sumPlaylistDuration } from '../../../utilities/utilities';
 
 class TrackList extends Component {
 
@@ -19,41 +21,45 @@ class TrackList extends Component {
         console.log(this.props);
         let trackList = <Spinner />
         if(!this.props.trackListData.loading){
-            
-            
+            const data = this.props.trackListData.trackListData.data;
+            console.log(this.props.trackListData);
+            const duration = sumPlaylistDuration(this.props.trackListData.trackListData.data);
             trackList = (
                 <>
-                    <TrackListHeader title={null}></TrackListHeader>
-                                <TrackListControls></TrackListControls>
-                                <TrackListBody 
-                                     data={this.props.trackListData.trackListData.data}></TrackListBody> 
-                    {this.props.trackListData.trackListData.data.map(track => {
-                        return  <p key={track.id}>{track.title}</p>    
-                    })}
+                   <TrackListHeader title='Tracks'
+                                    creator='Deezer Moods Editor'
+                                    thumbnail='https://cdns-images.dzcdn.net/images/user/0331a627b02d7dd43ea5bd8dab276ef4/56x56-000000-80-0-0.jpg'
+                                    description="Chart tracks"
+                                    numbOfTracks={data.length}
+                                    duration={duration}>
+                                    
+                    </TrackListHeader>
+                   <TrackListControls></TrackListControls>
+                   <TrackListBody data={this.props.trackListData.trackListData.data}></TrackListBody> 
                 </>
             )
         }
         if(this.props.location.state.dataList){
+            console.log(this.props.location.state.dataList);
             trackList = (
-                <div>
-                    Track List
-                    {this.props.location.state.dataList.map( track => {
-                        return <p key={track.id}>{track.title} - {track.artist.name}</p>
-                    })}
-                </div>
+                <>
+                   <TrackListHeader title='Charts'></TrackListHeader>
+                   <TrackListControls></TrackListControls>
+                   <TrackListBody data={this.props.location.state.dataList}></TrackListBody> 
+                </>
             )
         }
         if(this.props.location.state.tracks){
             trackList = (
-                <div>
-                    {this.props.location.state.tracks.map(track => {
-                        return <p key={track.id}>{track.title} - {track.artist.name}</p>
-                    })}
-                </div>
+                <>
+                   <TrackListHeader title='TOP 100' img={this.props.location.state.tracks.picture_medium}></TrackListHeader>
+                   <TrackListControls></TrackListControls>
+                   <TrackListBody data={this.props.location.state.tracks}></TrackListBody> 
+                </>
             )
         }
         return (
-            <div className='Container'>
+            <div className={classes.Container}>
                 {trackList}
             </div>
             
