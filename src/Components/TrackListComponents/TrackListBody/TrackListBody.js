@@ -17,13 +17,14 @@ const TrackListBody = (props) => {
             </div>
             <div className={classes.TrackListBody}>
                 {props.data.map((track, i) => { 
-                    return (<TrackListBodyItem
-                        key={track.id}
-                        ordinalNumber={ i + 1 }
-                        trackTitle={track.title}
-                        artistName={track.artist.name}
-                        albumName={track.album.title}
-                        duration={track.duration}>
+                    return (
+                        <TrackListBodyItem
+                            key={track.id}
+                            ordinalNumber={ i + 1 }
+                            trackTitle={track.title}
+                            artistName={track.artist.name}
+                            albumName={track.album.title}
+                            duration={track.duration}>
                         </TrackListBodyItem>)
                 })}
             </div>

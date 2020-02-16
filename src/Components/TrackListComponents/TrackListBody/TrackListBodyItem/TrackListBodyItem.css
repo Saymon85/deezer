@@ -6,7 +6,7 @@
     font-weight: 300;
     text-align: center;
     letter-spacing: 1px;
-    padding: 5px 0;
+    padding: 3px 0;
     height: 52px;
     width: 100%;
     position: relative;
@@ -20,7 +20,6 @@
 .PlayButton{
     display: none;
     font-size: 2.1rem;
-    transition:  ease-in-out 1s;
 }
 
 .PauseButton{

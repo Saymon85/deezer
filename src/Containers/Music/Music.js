@@ -40,16 +40,18 @@ class Music extends Component {
         });
     }
     
-    onChartsClick = (dataList, pathTo) => {
+    onChartsClick = (dataList, pathTo, tracksChartInfo) => {
         this.props.history.push({
             pathname: `/${pathTo}list`,
-            state: { dataList: dataList }
+            state: { dataList: dataList,
+                     tracksChartInfo: tracksChartInfo   
+            }
         })
     }
-    onTopAndGoodOldTimesClick = (tracksArray) => {
+    onTopAndGoodOldTimesClick = (playlistData) => {
         this.props.history.push({
             pathname: '/trackslist',
-            state: { tracks: tracksArray }
+            state: { playlistData: playlistData }
         })
     }
     onMusicClick = () => {
@@ -75,9 +77,10 @@ class Music extends Component {
                             artist={true}/>
                         <ChartsSpecialSection
                             title='Editorial Charts'
+                            editorial={true}
                             charts={true}
                             data={this.props.editorialCharts}
-                            clicked={(dataList, pathTo) => this.onChartsClick(dataList, pathTo)} />    
+                            clicked={(dataList, pathTo, tracksChartInfo) => this.onChartsClick(dataList, pathTo, tracksChartInfo)} />    
                         <MusicSection 
                             title='Editorial Release'
                             data={this.props.editorialRelease}
@@ -99,11 +102,11 @@ class Music extends Component {
                         <MusicSection
                             title='Top 100'
                             data={this.props.top100}
-                            clicked={(tracksArray) => this.onTopAndGoodOldTimesClick(tracksArray)} />
+                            clicked={(playlistData) => this.onTopAndGoodOldTimesClick(playlistData)} />
                         <MusicSection 
                             title='Good Old Times'
                             data={this.props.goodOldTimes}
-                            clicked={(tracksArray) => this.onTopAndGoodOldTimesClick(tracksArray)} />        
+                            clicked={(playlistData) => this.onTopAndGoodOldTimesClick(playlistData)} />        
                     </div>  
             )
         }

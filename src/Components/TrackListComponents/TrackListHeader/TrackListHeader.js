@@ -23,7 +23,7 @@ const TrackListHeader = (props) => {
                 <div className={classes.AdditionalInfo}>
                     <span>{`${props.numbOfTracks} tracks`}</span>
                     <span>{props.duration}</span>
-                    <span>{props.fans ? props.fans : 'No Fans'}</span>
+                    <span>{props.fans ? `${props.fans} fans` : 'No Fans'}</span>
                 </div>
             </div>
         </div>

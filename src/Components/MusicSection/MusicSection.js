@@ -6,12 +6,12 @@ import classes from './MusicSection.css';
 
 const MusicSection = (props) => {
    
-    let editorialSelection = props.data.map( item => {
+    let musicSection = props.data.map( item => {
              return (<MusicSectionItem 
                             key={item.id}
                             cover={item.cover_medium || item.picture_medium}
                             tracklist={item.tracklist}
-                            tracks={item.tracks ? item.tracks : null}
+                            playlistData={item.tracks ? item : null}
                             title={item.title}
                             artist={props.artist ? item.artist.name : null}
                             clicked={props.clicked}>
@@ -34,7 +34,7 @@ const MusicSection = (props) => {
             </div>
             <div>
                 <ul>
-                    {editorialSelection}
+                    {musicSection}
                 </ul>
             </div>
         </div>
