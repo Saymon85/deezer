@@ -7,14 +7,14 @@ const initialState = {
 }
 
 
-export const fetchTrackListDataStart = (state) => {
+const fetchTrackListDataStart = (state) => {
     return {
         ...state,
         loading: true
     }
 } 
 
-export const fetchTrackListDataSuccess = (state, trackListData) => {
+const fetchTrackListDataSuccess = (state, trackListData) => {
     console.log(trackListData);
     return {
         ...state,
@@ -23,7 +23,7 @@ export const fetchTrackListDataSuccess = (state, trackListData) => {
     }
 }
 
-export const fetchTrackListDataFail = (state, error) => {
+const fetchTrackListDataFail = (state, error) => {
     return {
         ...state,
         err: error,

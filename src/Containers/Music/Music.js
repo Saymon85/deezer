@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import * as actions from '../../store/actions/index';
 import axios from 'axios';
 import MusicSection from '../../Components/MusicSection/MusicSection';
@@ -24,16 +23,16 @@ class Music extends Component {
 
     }
 
-    onAlbumClick = (trackListURL) => {
+    onAlbumClick = (trackListURL, albumID) => {
         this.props.history.push({
             pathname: '/albumstracklist',
-            state: { trackListURL : trackListURL}
+            state: { trackListURL : trackListURL,
+                     albumID: albumID
+            }
         })
     }
 
     onTracksClick = (trackList) => {
-        console.log('clicked');
-        console.log(trackList)
         this.props.history.push({
             pathname:'/trackslist',
             state: { trackListURL: trackList }
@@ -73,7 +72,7 @@ class Music extends Component {
                             title='Editorial Selection' 
                             data={this.props.editorialSelection.data} 
                             loading={this.props.loading}
-                            clicked={(trackList) => this.onAlbumClick(trackList)}
+                            clicked={(trackList, albumID) => this.onAlbumClick(trackList, albumID)}
                             artist={true}/>
                         <ChartsSpecialSection
                             title='Editorial Charts'
@@ -84,7 +83,7 @@ class Music extends Component {
                         <MusicSection 
                             title='Editorial Release'
                             data={this.props.editorialRelease}
-                            clicked={(trackList) => this.onAlbumClick(trackList)}
+                            clicked={(trackList, albumID) => this.onAlbumClick(trackList, albumID)}
                             artist={true} />
                         <MusicSection
                             title='Radio Top'
@@ -143,4 +142,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Music, axios));
+export default connect(mapStateToProps, mapDispatchToProps)(Music, axios);

@@ -7,7 +7,7 @@ const initialState = {
 }
 
 
-export const fetchTop100DataSuccess = (state, top100Data) => {
+const fetchTop100DataSuccess = (state, top100Data) => {
     console.log(top100Data);
     return {
         ...state,
@@ -15,7 +15,7 @@ export const fetchTop100DataSuccess = (state, top100Data) => {
     }
 }
 
-export const fetchTop100DataFail = (state, error) => {
+const fetchTop100DataFail = (state, error) => {
     return{
         ...state,
         error: error

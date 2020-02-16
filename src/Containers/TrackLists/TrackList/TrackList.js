@@ -73,8 +73,7 @@ class TrackList extends Component {
                                     description={playlist.description ? playlist.description : 'Discover the most played songs on Deezer every day'}
                                     numbOfTracks={playlist.nb_tracks}
                                     fans={playlist.fans}
-                                    duration={duration} 
-                                    >    
+                                    duration={duration}>    
                    </TrackListHeader>
                    <TrackListControls share={playlist.share}></TrackListControls>
                    <TrackListBody data={playlist.tracks.data}></TrackListBody> 

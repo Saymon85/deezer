@@ -8,14 +8,14 @@ const initialState = {
     error: null
 }
 
-export const fetchEditorialStart = (state) => {
+const fetchEditorialStart = (state) => {
     return {
         ...state,
         loading: true
     }
 }
 
-export const fetchEditorialDataSuccess = (state, editorialData) => {
+const fetchEditorialDataSuccess = (state, editorialData) => {
     return {
         ...state,
         selection: editorialData.selection,
@@ -25,7 +25,7 @@ export const fetchEditorialDataSuccess = (state, editorialData) => {
     }
 }
 
-export const fetchEditorialDataFail = (state, err) => {
+const fetchEditorialDataFail = (state, err) => {
     return {
         ...state,
         error: err,
@@ -33,7 +33,7 @@ export const fetchEditorialDataFail = (state, err) => {
     }
 }
 
-export const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch(action.type){
         case actionTypes.FETCH_EDITORIAL_DATA_SUCCESS:
             return fetchEditorialDataSuccess(state, action.editorialData);

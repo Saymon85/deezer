@@ -8,7 +8,7 @@ const MusicSection = (props) => {
    
     let musicSection = props.data.map( item => {
              return (<MusicSectionItem 
-                            key={item.id}
+                            id={item.id}
                             cover={item.cover_medium || item.picture_medium}
                             tracklist={item.tracklist}
                             playlistData={item.tracks ? item : null}

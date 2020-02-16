@@ -5,7 +5,7 @@ const initialState = {
     error: null
 }
 
-export const fetchGoodOldTimesDataSuccess = (state, goodOldTimesData) => {
+const fetchGoodOldTimesDataSuccess = (state, goodOldTimesData) => {
     console.log(goodOldTimesData);
     return {
         ...state,
@@ -13,14 +13,14 @@ export const fetchGoodOldTimesDataSuccess = (state, goodOldTimesData) => {
     }
 }
 
-export const fetchGoodOldTimesDataFail = (state, error) => {
+const fetchGoodOldTimesDataFail = (state, error) => {
     return {
         ...state,
         error: error
     }
 }
 
-export const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch(action.type){
         case actionTypes.FETCH_GOOD_OLD_TIMES_DATA_SUCCESS:
             console.log(action.goodOldTimesData);

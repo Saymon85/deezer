@@ -2,7 +2,7 @@ import * as actionTypes from './actionTypes';
 import axiosGet from '../../axios-instance';
 import axios from 'axios';
 import { editorial } from '../../utilities/deezerUrls';
-import { fetchEditorialStart } from '../reducers/editorial';
+
 
 
 export const editorialFetchDataStart = () => {
@@ -30,7 +30,7 @@ export const editorialFetchDataFail = (err) => {
 }
 
 export const  fetchEditorialData = () => {
-    fetchEditorialStart();
+    editorialFetchDataStart();
     return dispatch => {
         const [selection, charts, release ] = [...editorial];
         const fetchSelection = axiosGet.get(selection);

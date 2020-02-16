@@ -1,12 +1,12 @@
 import * as actionTypes from '../actions/actionTypes';
 
-export const initialState = {
+const initialState = {
     charts: {},
     error: null
 }
 
 
-export const fetchChartsDataSuccess = (state, chartsData) => {
+const fetchChartsDataSuccess = (state, chartsData) => {
     
     return {
         ...state,
@@ -14,17 +14,16 @@ export const fetchChartsDataSuccess = (state, chartsData) => {
     }
 }
 
-export const fetchChartsDataFail = (state, error) => {
+const fetchChartsDataFail = (state, error) => {
     return {
         ...state,
         error: error
     }
 }
 
-export const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch(action.type){
         case actionTypes.FETCH_CHARTS_DATA_SUCCESS:
-            console.log(action.chartsData);
             return fetchChartsDataSuccess(state, action.chartsData);
         case actionTypes.FETCH_CHARTS_DATA_FAIL:
             return fetchChartsDataFail(state, action.error);

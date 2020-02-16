@@ -21,3 +21,7 @@ export {
 export {
     fetchTrackListData
 } from './trackList';
+
+export {
+    fetchAlbumData
+} from './album';

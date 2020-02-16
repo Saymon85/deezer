@@ -7,19 +7,26 @@ import axios from 'axios';
 
 class AlbumTrackList extends Component{
 
+    componentWillMount(){
+        console.log(this.props.albumData);
+    }
     componentDidMount(){
-        this.props.loadAlbumTrackListData(this.props.location.state.trackListURL);
+        this.props.loadAlbumData(this.props.location.state.albumID);
+        console.log(this.props.location.state);
     }
 
     render(){
-        
+    
         let albumTrackList = <Spinner />
 
-        if(!this.props.albumTrackListData.loading){
-            
+        if(!this.props.albumData.loading){
+
+            const albumData = this.props.albumData.albumData.tracks.data;
+            console.log(albumData);
+            console.log(this.props.albumData);       
             albumTrackList = (
                 <div>
-                     Album List {this.props.albumTrackListData.trackListData.data.map( track => {
+                     Album List {albumData.map( track => {
                         return <p key={track.id}>{track.title} - {track.artist.name}</p>
                      })} 
                 </div>
@@ -31,13 +38,15 @@ class AlbumTrackList extends Component{
 
 const mapStateToProps = (state) => {
     return {
-        albumTrackListData: state.trackList
+        albumTrackListData: state.trackList,
+        albumData: state.album
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        loadAlbumTrackListData: (trackListURL) => dispatch(actions.fetchTrackListData(trackListURL))
+        loadAlbumTrackListData: (trackListURL) => dispatch(actions.fetchTrackListData(trackListURL)),
+        loadAlbumData: (albumID) => dispatch(actions.fetchAlbumData(albumID))
     }
 }
 
