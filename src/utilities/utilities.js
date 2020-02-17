@@ -29,3 +29,13 @@ export const sumPlaylistDuration = (tracks) => {
     }, 0)
     return convertSecondsToHours(duration);
 }
+
+// #### Converts string in format YYYY-MM-DD to DD-MM-YYYY
+
+
+export const convertReleaseDate = (releaseDate) => {
+
+    const [,year, month, day] = /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/.exec(releaseDate);
+
+    return `${day}.${month}.${year}.`;
+}

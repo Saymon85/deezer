@@ -60,14 +60,14 @@ class TrackList extends Component {
             )
         }
 
-        if(this.props.location.state.playlistData.tracks){
+        if(this.props.location.state.playlistData){
             const playlist = this.props.location.state.playlistData;
             const duration = convertSecondsToHours(playlist.duration);
 
             trackList = (
                 <>
                    <TrackListHeader title={playlist.title} 
-                                    img={playlist.picture_medium}
+                                    img={playlist.picture_big}
                                     creator={playlist.creator.name}
                                     thumbnail='https://api.deezer.com/user/637006841/image'
                                     description={playlist.description ? playlist.description : 'Discover the most played songs on Deezer every day'}

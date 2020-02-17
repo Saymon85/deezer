@@ -24,6 +24,7 @@ const TrackListHeader = (props) => {
                     <span>{`${props.numbOfTracks} tracks`}</span>
                     <span>{props.duration}</span>
                     <span>{props.fans ? `${props.fans} fans` : 'No Fans'}</span>
+                    <span>{props.releaseDate ? props.releaseDate : null}</span>
                 </div>
             </div>
         </div>

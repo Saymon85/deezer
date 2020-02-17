@@ -6,7 +6,7 @@ const MusicSectionItem = (props) => {
     return (
         <li className={classes.MusicSectionItem}
               key={props.id}   
-              onClick={() => props.clicked(props.tracklist ? props.tracklist : props.playlistData, props.id)}>
+              onClick={() => props.clicked(props.playlistData ? props.playlistData : props.tracklist, props.id)}>
             <div>
                 {props.cover ?  <img src={props.cover} alt={props.artist}></img>  : props.text }
             </div>

@@ -33,6 +33,7 @@ class Music extends Component {
     }
 
     onTracksClick = (trackList) => {
+        console.log(trackList);
         this.props.history.push({
             pathname:'/trackslist',
             state: { trackListURL: trackList }
@@ -48,6 +49,7 @@ class Music extends Component {
         })
     }
     onTopAndGoodOldTimesClick = (playlistData) => {
+        console.log(playlistData);
         this.props.history.push({
             pathname: '/trackslist',
             state: { playlistData: playlistData }
@@ -66,6 +68,7 @@ class Music extends Component {
     render() {
         let music = <Spinner />;
         if (!this.props.loading){
+            console.log(this.props.editorialSelection.data);
             music = ( 
                     <div>
                         <MusicSection 
