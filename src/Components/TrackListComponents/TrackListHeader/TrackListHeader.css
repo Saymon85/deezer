@@ -90,7 +90,16 @@
     margin-right: 5px;
 }
 
+.AdditionalInfo span::before{
+    content: '\B7';
+    margin: 0 5px;
+}
 
+.AdditionalInfo span:first-child::before{
+    content: '';
+    margin: 0;
+    margin-left: -5px;
+} 
 
 .NoPicture{
     color: var(--White); 

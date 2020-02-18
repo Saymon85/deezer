@@ -133,7 +133,7 @@ const mapStateToProps = (state) => {
         goodOldTimes: state.goodOldTimes.goodOldTimesData,
         loading: state.editorial.loading
     }
-}
+};
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -143,6 +143,6 @@ const mapDispatchToProps = dispatch => {
         fetchTop100Data: () => dispatch(actions.fetchTop100Data()),
         fetchGoodOldTimesData: () => dispatch(actions.fetchGoodOldTimesData())
     }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Music, axios);

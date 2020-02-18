@@ -1,11 +1,11 @@
-.TrackList{
-    font-family: "Roboto-Medium";
-    margin-top: 10px;
-    padding-right: 10px;
-    width: 100%;
+.AlbumTrackList{
+        font-family: "Roboto-Medium";
+        margin-top: 10px;
+        padding-right: 10px;
+        width: 100%;
 }
 
-.TrackListHeading{
+.AlbumTracksHeading{
     color: var(--LightGray);
     border-top: 1px solid var(--BorderGray);
     font-size: 0.8rem;
@@ -13,11 +13,16 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: left;
-    padding: 10px 0px;
+    padding: 15px 0px;
     display: flex;
     width:100%;
 }
 
+.AlbumTracksBody{
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    width: 100%;
+}
 
 .Hash{
     text-align: center;
@@ -30,20 +35,9 @@
 }
 
 .Track{
-    width: 25%;
-}
-
-.Artist, .Album{
-    width: 20%;
+    width: 65%;
 }
 
 .Duration{
-    width: 12.5%;
+    width: 22.5%;
 }
-
-.TrackListBody{
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    width: 100%;
-}
-

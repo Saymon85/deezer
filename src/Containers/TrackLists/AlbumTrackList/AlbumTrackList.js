@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import TrackListHeader from '../../../Components/TrackListComponents/TrackListHeader/TrackListHeader';
 import TrackListControls from '../../../Components/TrackListComponents/TrackListControls/TrackListControls';
-import TrackListBody from '../../../Components/TrackListComponents/TrackListBody/TrackListBody';
+import AlbumTrackListBody from '../../../Components/AlbumTrackListBody/AlbumTrackListBody';
 import { convertSecondsToHours, convertReleaseDate } from '../../../utilities/utilities';
 
 
@@ -15,15 +15,12 @@ class AlbumTrackList extends Component{
         this.props.loadAlbumData(this.props.location.state.albumID);
     }
 
-    render(){
-    
+    render(){ 
         let albumTrackList = <Spinner />
         if(!this.props.albumData.loading){
             const albumData = this.props.albumData.albumData;
             const duration = convertSecondsToHours(albumData.duration);
-            const releaseDate = convertReleaseDate(albumData.release_date)
-            console.log(releaseDate);
-            console.log(this.props.albumData);       
+            const releaseDate = convertReleaseDate(albumData.release_date)    
             albumTrackList = (
                 <>
                     <TrackListHeader 
@@ -37,12 +34,7 @@ class AlbumTrackList extends Component{
                         releaseDate={releaseDate}>    
                     </TrackListHeader>
                     <TrackListControls share={albumData.share}></TrackListControls>
-                    <TrackListBody data={albumData.tracks.data}></TrackListBody>
-                    <div>
-                        {albumData.tracks.data.map( track => {
-                            return <p key={track.id}>{track.title} - {track.artist.name}</p>
-                        })} 
-                    </div>
+                    <AlbumTrackListBody data={albumData.tracks.data}></AlbumTrackListBody>
                 </>
             )
         }
@@ -55,13 +47,13 @@ const mapStateToProps = (state) => {
         albumTrackListData: state.trackList,
         albumData: state.album
     }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
         loadAlbumTrackListData: (trackListURL) => dispatch(actions.fetchTrackListData(trackListURL)),
         loadAlbumData: (albumID) => dispatch(actions.fetchAlbumData(albumID))
     }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(AlbumTrackList, axios);
