@@ -1,6 +1,5 @@
 const carousel = (elementId, e) => {
     console.log(e.target.closest('div').firstElementChild);
-    console.log(elementId);
     const sliderContainer = document.querySelector(`#${elementId}`);
     const slider = sliderContainer.querySelector('ul');
     const sliderItems = slider.querySelectorAll('li');
