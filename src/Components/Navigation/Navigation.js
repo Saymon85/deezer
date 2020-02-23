@@ -21,7 +21,7 @@ const Navigation = () => {
                     exact 
                     activeClass={classes.Active} 
                     clicked={toggleActiveClass}>Music</NavigationItem>
-              <NavigationItem to='/search' icon='fas fa-th-large' clicked={toggleActiveClass}>Search</NavigationItem>
+              <NavigationItem to='/search' icon='fas fa-search' clicked={toggleActiveClass}>Search</NavigationItem>
               <NavigationItem to='/favorites' icon='far fa-heart' clicked={toggleActiveClass}>Favorites</NavigationItem>
           </ul>  
         </div>

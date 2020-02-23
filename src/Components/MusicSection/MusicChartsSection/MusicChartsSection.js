@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './ChartsSpecialSection.css';
+import classes from './MusicChartsSection.css';
 import { backgroundGradients } from '../../../utilities/helpers';
 
-const ChartSpecialSection = (props) => {
+const MusicChartsSection = (props) => {
 
     const chartSection = Object.keys(props.data)
            .filter( el => el !== 'podcasts')
@@ -33,5 +33,5 @@ const ChartSpecialSection = (props) => {
     )
 }
 
-export default ChartSpecialSection;
+export default MusicChartsSection;
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
 import axios from 'axios';
 import MusicSection from '../../Components/MusicSection/MusicSection';
-import ChartsSpecialSection from '../../Components/MusicSection/ChartsSpecialSection/ChartsSpecialSection';
+import MusicChartsSection from '../../Components/MusicSection/MusicChartsSection/MusicChartsSection';
 import Spinner from '../../Components/UI/Spinner/Spinner';
 import classes from './Music.css';
 
@@ -48,6 +48,7 @@ class Music extends Component {
             }
         })
     }
+
     onTopAndGoodOldTimesClick = (playlistData) => {
         console.log(playlistData);
         this.props.history.push({
@@ -55,6 +56,7 @@ class Music extends Component {
             state: { playlistData: playlistData }
         })
     }
+
     onMusicClick = () => {
         console.log(this.props.editorialRelease);
         console.log(this.props.radioGenres);
@@ -71,41 +73,47 @@ class Music extends Component {
             console.log(this.props.editorialSelection.data);
             music = ( 
                     <div>
-                        <MusicSection 
+                        <MusicSection
+                            elementId='editorialSelection' 
                             title='Editorial Selection' 
                             data={this.props.editorialSelection.data} 
                             loading={this.props.loading}
                             clicked={(trackList, albumID) => this.onAlbumClick(trackList, albumID)}
-                            artist={true}/>
-                        <ChartsSpecialSection
+                            artist={true} />
+                        <MusicChartsSection
                             title='Editorial Charts'
                             editorial={true}
                             charts={true}
                             data={this.props.editorialCharts}
                             clicked={(dataList, pathTo, tracksChartInfo) => this.onChartsClick(dataList, pathTo, tracksChartInfo)} />    
-                        <MusicSection 
+                        <MusicSection
+                            elementId='editorialRelease' 
                             title='Editorial Release'
                             data={this.props.editorialRelease}
                             clicked={(trackList, albumID) => this.onAlbumClick(trackList, albumID)}
                             artist={true} />
                         <MusicSection
+                            elementId='radioTop'
                             title='Radio Top'
                             data={this.props.radioTop.data}
                             clicked={(trackList) => this.onTracksClick(trackList)} />
                         <MusicSection 
+                            elementId='radioLists'
                             title='Radio Lists'
                             data={this.props.radioLists.data}
                             clicked={(trackList) => this.onTracksClick(trackList)} />
-                        <ChartsSpecialSection
+                        <MusicChartsSection
                             title='Global Charts'
                             charts={true}
                             data={this.props.charts}
                             clicked={(dataList, pathTo) => this.onChartsClick(dataList, pathTo)} />       
                         <MusicSection
+                            elementId='Top100'
                             title='Top 100'
                             data={this.props.top100}
                             clicked={(playlistData) => this.onTopAndGoodOldTimesClick(playlistData)} />
                         <MusicSection 
+                            elementId='goodOldTimes'
                             title='Good Old Times'
                             data={this.props.goodOldTimes}
                             clicked={(playlistData) => this.onTopAndGoodOldTimesClick(playlistData)} />        

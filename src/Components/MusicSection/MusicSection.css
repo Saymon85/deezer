@@ -1,6 +1,5 @@
 .MusicSection {
     display: flex;
-    overflow: hidden;
     flex-direction: column;
     margin-top: 10px;
     width: 100%;
@@ -48,9 +47,12 @@
 }
 /* #### Content section styles #### */
 
-.MusicSection div ul{
+.SectionItems {
+    overflow: hidden;
+}
+
+.SectionItems ul{
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: left;
     list-style: none;

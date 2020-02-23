@@ -1,6 +1,7 @@
 import React from 'react';
 import MusicSectionItem from './MusicSectionItem/MusicSectionItem';
 import classes from './MusicSection.css';
+import carousel from '../../utilities/carousel';
 
 
 
@@ -28,12 +29,12 @@ const MusicSection = (props) => {
                     <button className={`Prev ${classes.Disabled}`}>
                         <i className='fas fa-2x fa-angle-left'></i>
                     </button>
-                    <button className='Next'>
+                    <button className='Next' onClick={(e) => carousel(props.elementId, e)}>
                         <i className='fas fa-2x fa-angle-right'></i>
                     </button>
                 </div> 
             </div>
-            <div>
+            <div className={classes.SectionItems} id={props.elementId}>
                 <ul>
                     {musicSection}
                 </ul>

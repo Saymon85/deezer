@@ -14,3 +14,7 @@
     border-left: 5px solid var(--BluePrimary);
     color: var(--BluePrimary);
 } 
+
+.Active a{
+    margin-left: -5px;
+}

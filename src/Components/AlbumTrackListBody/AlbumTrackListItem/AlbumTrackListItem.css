@@ -78,3 +78,8 @@
 .Hidden{
     display: none;
 }
+
+.Heart:hover{
+    border-radius: 10px;
+    background-color: var(--White);
+}
