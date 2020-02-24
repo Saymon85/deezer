@@ -5,14 +5,12 @@
     width: 100%;
 }
 
-.MusicSection > div {
-    width: 100%;
-}
 
 /* ##### Heading style ##### */
 
 .SectionHeading {
     position: relative;
+    width: 100%;
 }
 
 .MusicSection div h2{
@@ -49,6 +47,7 @@
 
 .SectionItems {
     overflow: hidden;
+    width: 100%;
 }
 
 .SectionItems ul{

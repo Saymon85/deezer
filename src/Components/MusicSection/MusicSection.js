@@ -24,7 +24,7 @@ const MusicSection = (props) => {
     return (
         <div className={classes.MusicSection}>
             <div className={classes.SectionHeading}>
-                <h2>{props.title}</h2>
+                <h2 onClick={((e) => { carousel(props.elementId, e)})}>{props.title}</h2>
                 <div className={classes.CarouselButtons}>
                     <button className={`Prev ${classes.Disabled}`}>
                         <i className='fas fa-2x fa-angle-left'></i>
