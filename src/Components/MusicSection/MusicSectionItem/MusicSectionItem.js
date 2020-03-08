@@ -4,8 +4,7 @@ import classes from './MusicSectionItem.css';
 const MusicSectionItem = (props) => {
 
     return (
-        <li className={classes.MusicSectionItem}
-              key={props.id}   
+        <li className={classes.MusicSectionItem} 
               onClick={() => props.clicked(props.playlistData ? props.playlistData : props.tracklist, props.id)}>
             <div>
                 {props.cover ?  <img src={props.cover} alt={props.artist}></img>  : props.text }

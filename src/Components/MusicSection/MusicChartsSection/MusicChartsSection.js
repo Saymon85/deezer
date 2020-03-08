@@ -20,7 +20,8 @@ const MusicChartsSection = (props) => {
              console.log(props.data[el]);
              return <li key={`${el}${background}`} 
                         style={{backgroundImage:`var(${background})`}}>
-                        <div onClick={() => props.clicked(props.data[el].data, el, tracksChartInfo)}>{el}</div></li>;
+                        <div onClick={() => props.clicked(props.data[el].data, el, tracksChartInfo)}>{el}</div>
+                    </li>;
     });
 
     return (

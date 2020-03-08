@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import axiosGet from '../../axios-instance';
+import axiosGet from '../../axios-instance_2';
 import axios from 'axios';
 import { goodOldTimes} from '../../utilities/deezerUrls';
 
