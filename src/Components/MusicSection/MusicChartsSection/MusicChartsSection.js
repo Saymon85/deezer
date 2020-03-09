@@ -5,11 +5,11 @@ import { backgroundGradients } from '../../../utilities/helpers';
 const MusicChartsSection = (props) => {
 
     const chartSection = Object.keys(props.data)
-           .filter( el => el !== 'podcasts')
-           .map((el, i) => {
+           .filter( chart => chart !== 'podcasts')
+           .map( chart => {
              const background = backgroundGradients[Math.round(Math.random() * 14)];
              let tracksChartInfo = null;
-             if(el === 'tracks'){
+             if(chart === 'tracks'){
                  tracksChartInfo = {
                      title: props.editorial ? 'Editorial Tracks Chart' : 'Tracks Chart',
                      creator: 'Deezer Charts',
@@ -17,10 +17,12 @@ const MusicChartsSection = (props) => {
                      description: props.editorial ? 'Editorial Charts track list' : 'Top tracks chart'
                  }
              }
-             console.log(props.data[el]);
-             return <li key={`${el}${background}`} 
+             console.log(props.data[chart]);
+             return <li key={`${chart}${background}`} 
                         style={{backgroundImage:`var(${background})`}}>
-                        <div onClick={() => props.clicked(props.data[el].data, el, tracksChartInfo)}>{el}</div>
+                          <div onClick={() => props.clicked(props.data[chart].data, chart, tracksChartInfo)}>
+                             {chart}
+                          </div>
                     </li>;
     });
 

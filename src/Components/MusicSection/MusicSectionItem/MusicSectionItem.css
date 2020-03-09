@@ -2,15 +2,11 @@
     height: 100%;
     min-width: 22%;
     margin-right: 3%;
-/*     display: flex;
-    flex-direction: column;
-    justify-content: center;    */   
 }
 
 .MusicSectionItem div:first-child{
     height: 80%;
     min-width: 100%;
-    
 }
 
 .MusicSectionItem div img {
@@ -33,8 +29,7 @@
     max-width: 80%;
 }
 
-
-.MusicSectionItem div h5:hover{
+.MusicSectionItem div h5 span:hover{
     cursor: pointer;
     border-bottom: 1px solid var(--Black);
 }

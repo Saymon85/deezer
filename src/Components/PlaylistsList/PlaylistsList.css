@@ -1,0 +1,14 @@
+.PlaylistsList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.PlaylistsList li{
+    width: 20%;
+    margin-right: 2%;
+    margin-top: 25px;
+}

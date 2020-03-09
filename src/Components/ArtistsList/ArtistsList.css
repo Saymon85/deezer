@@ -1,0 +1,23 @@
+.ArtistsList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.ArtistsList li{
+    margin-right: 2%;
+    margin-top: 25px;
+    text-align: center;
+    width: 20%;
+}
+
+.ArtistsList li img{
+    border-radius: 50%;
+}
+
+.ArtistsList li div h5{
+    padding-left: 20%;
+}

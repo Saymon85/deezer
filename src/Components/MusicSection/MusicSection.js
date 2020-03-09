@@ -10,7 +10,7 @@ class MusicSection extends Component {
         maxed: false
     }
 
-    getDomElements(elementId, e) {
+    getSliderElements(elementId, e) {
         const sliderContainer = document.querySelector(`#${elementId}`);
         const sectionHeading = e.target.closest('div');
 
@@ -25,7 +25,7 @@ class MusicSection extends Component {
 
     onLeftClick = (elementId, disableClass, e) => {
 
-        const slider = this.getDomElements(elementId, e);
+        const slider = this.getSliderElements(elementId, e);
   
         if(slider.sliderItems.length % 4 !== 0 && this.state.maxed){
             if(!(this.state.counter - 1 === 0)){
@@ -64,7 +64,7 @@ class MusicSection extends Component {
 
     onRightClick = (elementId, disableClass, e) => {
 
-        const slider = this.getDomElements(elementId, e);
+        const slider = this.getSliderElements(elementId, e);
         const maxX = Math.floor(slider.sliderItems.length / 4);
 
         if(this.state.counter === (maxX - 1)){
@@ -89,7 +89,7 @@ class MusicSection extends Component {
 
     render(){
         console.log(this.props.elementId);    
-        let musicSection = this.props.data.map( item => {
+        let musicSectionItems = this.props.data.map( item => {
             return (<MusicSectionItem 
                            id={item.id}
                            key={item.id}
@@ -121,7 +121,7 @@ class MusicSection extends Component {
                 </div>
                 <div className={classes.SectionItems} id={this.props.elementId}>
                     <ul>
-                        {musicSection}
+                        {musicSectionItems}
                     </ul>
                 </div>
             </div>
@@ -130,6 +130,3 @@ class MusicSection extends Component {
 };
 
 export default MusicSection;
-
-
-//onClick={((e) => { carousel(props.elementId, e)})}
