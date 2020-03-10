@@ -10,7 +10,7 @@ const MusicSectionItem = (props) => {
                 {props.cover ?  <img src={props.cover} alt={props.artist}></img>  : props.text }
             </div>
             <div>
-                <h5><span>{props.title}</span></h5>
+                <h5>{props.title}</h5>
                 <h6>{props.artist}</h6>
             </div>
         </li>

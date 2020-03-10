@@ -80,18 +80,18 @@ class Music extends Component {
                             loading={this.props.loading}
                             clicked={(trackList, albumID) => this.onAlbumClick(trackList, albumID)}
                             artist={true} />
-                        <MusicChartsSection
-                            title='Editorial Charts'
-                            editorial={true}
-                            charts={true}
-                            data={this.props.editorialCharts}
-                            clicked={(dataList, pathTo, tracksChartInfo) => this.onChartsClick(dataList, pathTo, tracksChartInfo)} />    
                         <MusicSection
                             elementId='editorialRelease' 
                             title='Editorial Release'
                             data={this.props.editorialRelease}
                             clicked={(trackList, albumID) => this.onAlbumClick(trackList, albumID)}
                             artist={true} />
+                        <MusicChartsSection
+                            title='Editorial Charts'
+                            editorial={true}
+                            charts={true}
+                            data={this.props.editorialCharts}
+                            clicked={(dataList, pathTo, tracksChartInfo) => this.onChartsClick(dataList, pathTo, tracksChartInfo)} />    
                         <MusicSection
                             elementId='radioTop'
                             title='Radio Top'

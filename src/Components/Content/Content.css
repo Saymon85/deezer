@@ -1,9 +1,9 @@
 .Content{
     position: fixed;
-    left: 20vw;
+    padding-left: 2vw;
     right: 0;
     top: 10vh;
     bottom: 10vh;
-    width:80vw;
+    width: 83vw;
     overflow-y: scroll; 
 }
