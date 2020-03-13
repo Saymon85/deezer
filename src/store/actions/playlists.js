@@ -32,6 +32,7 @@ export const fetchPlaylistData = (playlistID) => {
     return dispatch => {
         axiosGet.get(playlistURL)
             .then(response => {
+                console.log('iz akcije',response);
                 dispatch(fetchPlaylistDataSuccess(response.data));
             })
             .catch(err => {
@@ -76,6 +77,8 @@ export const fetchTop100Data = () => {
         }).catch(err => dispatch(fetchTop100DataFail(err)));
     }
 }
+
+
 
 
 // ###### FETCH GOOD OLD TIMES PLAYLIST DATA

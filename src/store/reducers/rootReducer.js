@@ -3,8 +3,6 @@ import reducer  from './reducer';
 import editorialReducer from './editorial';
 import radioReducer from './radio';
 import chartsReducer from './charts';
-/* import top100Reducer from './top100';
-import goodOldTimesReducer from './goodOldTimes'; */
 import trackListReducer from './trackList';
 import albumReducer from './album';
 import playlistDataReducer from './playlists';

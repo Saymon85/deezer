@@ -18,7 +18,8 @@ class TrackList extends Component {
             this.props.loadTrackListData(trackListURL);
         }
         if(playlistID){
-            
+            console.log(playlistID);
+            this.props.loadPlaylistData(playlistID);
         }
     }
     render(){
@@ -28,7 +29,7 @@ class TrackList extends Component {
         if(!this.props.trackListData.loading){
             const data = this.props.trackListData.trackListData.data;
             const duration = sumPlaylistDuration(this.props.trackListData.trackListData.data);
-
+            console.log('salslalalalla');
             trackList = (
                 <>
                    <TrackListHeader title='Tracks'
@@ -64,10 +65,10 @@ class TrackList extends Component {
             )
         }
 
-        if(this.props.location.state.playlistData){
-            const playlist = this.props.location.state.playlistData;
+        if(this.props.location.state.playlistData || !this.props.playlistData.loading){
+            const playlist = this.props.location.state.playlistData || this.props.playlistData.playlistData;
             const duration = convertSecondsToHours(playlist.duration);
-
+            console.log(playlist);
             trackList = (
                 <>
                    <TrackListHeader title={playlist.title} 
@@ -96,13 +97,15 @@ class TrackList extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        trackListData: state.trackList
+        trackListData: state.trackList,
+        playlistData: state.playlistData
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        loadTrackListData: (trackListURL) => dispatch(actions.fetchTrackListData(trackListURL))
+        loadTrackListData: (trackListURL) => dispatch(actions.fetchTrackListData(trackListURL)),
+        loadPlaylistData: (playlistID) => dispatch(actions.fetchPlaylistData(playlistID))
     }
 }
 

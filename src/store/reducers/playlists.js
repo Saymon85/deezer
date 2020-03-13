@@ -3,7 +3,7 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
     playlistData: null,
-    loading: false,
+    loading: true,
     error: null,
     top100: {
         data: null,
@@ -23,6 +23,7 @@ const fetchPlaylistDataStart = (state) => {
 }
 
 const fetchPlaylistDataSuccess = (state, playlistData) => {
+    console.log(playlistData);
     return {
         ...state,
         playlistData: playlistData,
@@ -85,7 +86,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.FETCH_PLAYLIST_DATA_START:
             return fetchPlaylistDataStart(state);
         case actionTypes.FETCH_PLAYLIST_DATA_SUCCESS:
-            console.log(action.playlistData);
+            console.log('iz reducera',action.playlistData);
             return fetchPlaylistDataSuccess(state, action.playlistData);
         case actionTypes.FETCH_PLAYLIST_DATA_FAIL:
             return fetchPlaylistDataFail(state, action.error);        

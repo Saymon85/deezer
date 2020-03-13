@@ -3,8 +3,10 @@ import classes from './PlaylistsList.css';
 import MusicSectionItem from '../MusicSection/MusicSectionItem/MusicSectionItem';
 
 const PlaylistsList = (props) => {
+
     const playlists = props.location.state.dataList;
     const onPlaylistClick = (tracklist, playlistID) => {
+        console.log(playlistID);
          props.history.push({
             pathname: '/trackslist',
             state: {
@@ -19,7 +21,8 @@ const PlaylistsList = (props) => {
                 return (
                     <MusicSectionItem
                         key={playlist.id}
-                        cover={playlist.picture_medium}
+                        id={playlist.id}
+                        cover={playlist.picture_big}
                         title={playlist.title}
                         tracklist={playlist.tracklist}
                         artist={`Tracks: ${playlist.nb_tracks}`}
