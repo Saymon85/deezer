@@ -13,8 +13,12 @@ class TrackList extends Component {
 
     componentDidMount(){
         const trackListURL = this.props.location.state.trackListURL;
+        const playlistID = this.props.location.state.playlistID;
         if(trackListURL){
             this.props.loadTrackListData(trackListURL);
+        }
+        if(playlistID){
+            
         }
     }
     render(){

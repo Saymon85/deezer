@@ -42,6 +42,7 @@ export const  fetchEditorialData = () => {
                const chartsData = response[1].data;
                const releaseData = response[2].data.data;
                dispatch(editorialFetchDataSuccess(selectionData, chartsData, releaseData));
+               
         })
             .catch(err => dispatch(editorialFetchDataFail(err)));
     }        

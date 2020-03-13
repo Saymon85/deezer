@@ -11,12 +11,10 @@ export {
 } from './charts';
 
 export {
-    fetchTop100Data
-} from './top100';
-
-export {
-    fetchGoodOldTimesData
-} from './goodOldTimes';
+    fetchTop100Data,
+    fetchGoodOldTimesData,
+    fetchPlaylistData
+} from './playlists';
 
 export {
     fetchTrackListData

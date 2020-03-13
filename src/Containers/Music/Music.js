@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
 import axios from 'axios';
-import MusicSection from '../../Components/MusicSection/MusicSection';
+import MusicSection from './MusicSection/MusicSection';
 import MusicChartsSection from '../../Components/MusicSection/MusicChartsSection/MusicChartsSection';
 import Spinner from '../../Components/UI/Spinner/Spinner';
 import classes from './Music.css';
@@ -14,13 +14,13 @@ class Music extends Component {
     }
 
     componentDidMount(){
-
         this.props.fetchRadioData();
         this.props.fetchChartsData();
         this.props.fetchTop100Data();
         this.props.fetchGoodOldTimesData();
-        this.props.fetchEditorialData();   
-
+        setTimeout(1000, this.props.fetchEditorialData());   
+        console.log(this.props.goodOldTimes);
+        console.log(this.props.top100);
     }
 
     onAlbumClick = (trackListURL, albumID) => {
@@ -33,7 +33,6 @@ class Music extends Component {
     }
 
     onTracksClick = (trackList) => {
-        console.log(trackList);
         this.props.history.push({
             pathname:'/trackslist',
             state: { trackListURL: trackList }
@@ -41,8 +40,9 @@ class Music extends Component {
     }
     
     onChartsClick = (dataList, pathTo, tracksChartInfo) => {
+        const path = `/${pathTo}list`;
         this.props.history.push({
-            pathname: `/${pathTo}list`,
+            pathname: path,
             state: { dataList: dataList,
                      tracksChartInfo: tracksChartInfo   
             }
@@ -70,7 +70,7 @@ class Music extends Component {
     render() {
         let music = <Spinner />;
         if (!this.props.loading){
-            console.log(this.props.editorialSelection.data);
+
             music = ( 
                     <div>
                         <MusicSection
@@ -137,8 +137,8 @@ const mapStateToProps = (state) => {
         radioTop: state.radio.top,
         radioLists: state.radio.lists,
         charts: state.charts.charts,
-        top100: state.top100.top100Data,
-        goodOldTimes: state.goodOldTimes.goodOldTimesData,
+        top100: state.playlistData.top100.data,
+        goodOldTimes: state.playlistData.goodOldTimes.data,
         loading: state.editorial.loading
     }
 };

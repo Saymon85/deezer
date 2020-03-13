@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import MusicSectionItem from './MusicSectionItem/MusicSectionItem';
+import MusicSectionItem from '../../../Components/MusicSection/MusicSectionItem/MusicSectionItem';
 import classes from './MusicSection.css';
+
 
 class MusicSection extends Component {
     

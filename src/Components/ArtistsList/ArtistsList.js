@@ -2,8 +2,6 @@ import React from 'react';
 import classes from './ArtistsList.css';
 import MusicSectionItem from '../MusicSection/MusicSectionItem/MusicSectionItem';
 
-
-
 const ArtistList = (props) => {
     const artists = props.location.state.dataList;
     return (
