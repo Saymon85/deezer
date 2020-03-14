@@ -23,6 +23,7 @@ export const editorialFetchDataSuccess = (selection, charts, release) => {
 }
 
 export const editorialFetchDataFail = (err) => {
+    console.log(err);
     return {
         type: actionTypes.FETCH_EDITORIAL_DATA_FAIL,
         error: err
@@ -38,12 +39,16 @@ export const  fetchEditorialData = () => {
         const fetchRelease = axiosGet.get(release);
         axios.all([fetchSelection, fetchCharts, fetchRelease])
             .then( response => {
+                console.log(response);
                const selectionData = response[0].data;
                const chartsData = response[1].data;
                const releaseData = response[2].data.data;
                dispatch(editorialFetchDataSuccess(selectionData, chartsData, releaseData));
                
         })
-            .catch(err => dispatch(editorialFetchDataFail(err)));
+            .catch(err => {
+               console.log(err); 
+               return  dispatch(editorialFetchDataFail(err));
+            });
     }        
 }

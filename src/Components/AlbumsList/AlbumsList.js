@@ -19,6 +19,7 @@ const AlbumsList = (props) => {
                     return (
                         <MusicSectionItem 
                             key={album.id}
+                            id={album.id}
                             cover={album.cover_medium}
                             title={album.title}
                             artist={album.artist.name}

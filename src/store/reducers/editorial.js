@@ -35,12 +35,12 @@ const fetchEditorialDataFail = (state, err) => {
 
 const reducer = (state = initialState, action) => {
     switch(action.type){
+        case actionTypes.FETCH_EDITORIAL_DATA_START:
+            return fetchEditorialStart(state, action.loading);  
         case actionTypes.FETCH_EDITORIAL_DATA_SUCCESS:
             return fetchEditorialDataSuccess(state, action.editorialData);
         case actionTypes.FETCH_EDITORIAL_DATA_FAIL:
-            return fetchEditorialDataFail(state, action.error);
-        case actionTypes.FETCH_EDITORIAL_DATA_START:
-            return fetchEditorialStart(state, action.loading);    
+            return fetchEditorialDataFail(state, action.error);  
         default:
             return state;        
     }

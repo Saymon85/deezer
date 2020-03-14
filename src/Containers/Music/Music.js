@@ -19,9 +19,10 @@ class Music extends Component {
         this.props.fetchTop100Data();
         this.props.fetchGoodOldTimesData();
         //  **** set timeout for testing purposes ****
-        setTimeout(1000, this.props.fetchEditorialData());   
+        setTimeout(500, this.props.fetchEditorialData());   
         console.log(this.props.goodOldTimes);
         console.log(this.props.top100);
+        console.log(this.props.editorialRelease);
     }
 
     onAlbumClick = (trackListURL, albumID) => {
@@ -71,13 +72,13 @@ class Music extends Component {
     render() {
         let music = <Spinner />;
         if (!this.props.loading){
-
+            
             music = ( 
                     <div>
                         <MusicSection
                             elementId='editorialSelection' 
                             title='Editorial Selection' 
-                            data={this.props.editorialSelection.data} 
+                            data={this.props.editorialSelection} 
                             loading={this.props.loading}
                             clicked={(trackList, albumID) => this.onAlbumClick(trackList, albumID)}
                             artist={true} />
@@ -96,12 +97,12 @@ class Music extends Component {
                         <MusicSection
                             elementId='radioTop'
                             title='Radio Top'
-                            data={this.props.radioTop.data}
+                            data={this.props.radioTop}
                             clicked={(trackList) => this.onTracksClick(trackList)} />
                         <MusicSection 
                             elementId='radioLists'
                             title='Radio Lists'
-                            data={this.props.radioLists.data}
+                            data={this.props.radioLists}
                             clicked={(trackList) => this.onTracksClick(trackList)} />
                         <MusicChartsSection
                             title='Global Charts'
@@ -131,12 +132,12 @@ class Music extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        editorialSelection: state.editorial.selection,
+        editorialSelection: state.editorial.selection.data,
         editorialRelease: state.editorial.release,
         editorialCharts: state.editorial.charts,
         radioGenres: state.radio.genres,
-        radioTop: state.radio.top,
-        radioLists: state.radio.lists,
+        radioTop: state.radio.top.data,
+        radioLists: state.radio.lists.data,
         charts: state.charts.charts,
         top100: state.playlistData.top100.data,
         goodOldTimes: state.playlistData.goodOldTimes.data,

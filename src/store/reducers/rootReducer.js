@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import reducer  from './reducer';
 import editorialReducer from './editorial';
 import radioReducer from './radio';
 import chartsReducer from './charts';
@@ -13,8 +12,7 @@ const rootReducer = combineReducers({
     charts: chartsReducer,
     playlistData: playlistDataReducer,
     trackList: trackListReducer,
-    album: albumReducer,
-    reducer: reducer
+    album: albumReducer
 });
 
 export default rootReducer;
