@@ -23,3 +23,7 @@ export {
 export {
     fetchAlbumData
 } from './album';
+
+export {
+    fetchArtistData
+} from './artists';

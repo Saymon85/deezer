@@ -19,7 +19,7 @@ class Music extends Component {
         this.props.fetchTop100Data();
         this.props.fetchGoodOldTimesData();
         //  **** set timeout for testing purposes ****
-        setTimeout(500, this.props.fetchEditorialData());   
+        this.props.fetchEditorialData();   
         console.log(this.props.goodOldTimes);
         console.log(this.props.top100);
         console.log(this.props.editorialRelease);

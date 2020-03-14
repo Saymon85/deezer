@@ -24,7 +24,8 @@ const fetchAlbumDataSuccess = (state, albumData) => {
 const fetchAlbumDataFail = (state, error) => {
     return {
         ...state,
-        error: error
+        error: error,
+        loading: false
     }
 }
 

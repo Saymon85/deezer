@@ -4,7 +4,7 @@ import MusicSectionItem from '../MusicSection/MusicSectionItem/MusicSectionItem'
 
 const PlaylistsList = (props) => {
 
-    const playlists = props.location.state.dataList;
+    const playlists = props.location.state.dataList || props.playlists;
     const onPlaylistClick = (tracklist, playlistID) => {
         console.log(playlistID);
          props.history.push({

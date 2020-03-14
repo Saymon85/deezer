@@ -32,7 +32,6 @@ export const fetchPlaylistData = (playlistID) => {
     return dispatch => {
         axiosGet.get(playlistURL)
             .then(response => {
-                console.log('iz akcije',response);
                 dispatch(fetchPlaylistDataSuccess(response.data));
             })
             .catch(err => {
@@ -72,12 +71,10 @@ export const fetchTop100Data = () => {
             axiosGet.get(top100[7])
         ]).then( response => {
             const responseData = response.map(item => item.data);
-            console.log(responseData);
             dispatch(fetchTop100DataSuccess(responseData));
         }).catch(err => dispatch(fetchTop100DataFail(err)));
     }
 }
-
 
 
 
@@ -110,7 +107,6 @@ export const fetchGoodOldTimesData = () => {
             axiosGet.get(goodOldTimes[7]),
         ]).then(response => {
             const responseData = response.map(item => item.data);
-            console.log(responseData);
             dispatch(fetchGoodOldTimesDataSuccess(responseData));
         }).catch(err => {
             dispatch(fetchGoodOldTimesDataFail(err));

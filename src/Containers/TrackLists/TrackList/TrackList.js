@@ -18,7 +18,6 @@ class TrackList extends Component {
             this.props.loadTrackListData(trackListURL);
         }
         if(playlistID){
-            console.log(playlistID);
             this.props.loadPlaylistData(playlistID);
         }
     }
@@ -29,7 +28,7 @@ class TrackList extends Component {
         if(!this.props.trackListData.loading){
             const data = this.props.trackListData.trackListData.data;
             const duration = sumPlaylistDuration(this.props.trackListData.trackListData.data);
-            console.log('salslalalalla');
+
             trackList = (
                 <>
                    <TrackListHeader title='Tracks'

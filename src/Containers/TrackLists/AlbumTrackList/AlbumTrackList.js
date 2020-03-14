@@ -16,7 +16,7 @@ class AlbumTrackList extends Component{
     }
 
     render(){ 
-        let albumTrackList = <Spinner />
+        let albumTrackList = <Spinner />;
         if(!this.props.albumData.loading){
             const albumData = this.props.albumData.albumData;
             const duration = convertSecondsToHours(albumData.duration);

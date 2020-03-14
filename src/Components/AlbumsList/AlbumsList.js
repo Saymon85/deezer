@@ -3,7 +3,7 @@ import classes from './AlbumsList.css';
 import MusicSectionItem from '../MusicSection/MusicSectionItem/MusicSectionItem'; 
 
 const AlbumsList = (props) => {
-    const albums = props.location.state.dataList;
+    const albums = props.location.state.dataList || props.albums;
     const onAlbumClick = (trackListURL, albumID) => {
         props.history.push({
             pathname: '/albumstracklist',
